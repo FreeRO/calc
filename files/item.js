@@ -1260,7 +1260,7 @@ ItemOBJ = [
 ,[1253,50,0,2,0,0,20,45,"Whikebine's Black Cat Ears_",0,"",18,-50,9,10,10,3,70,10,0]
 ,[1254,50,0,3,0,1,10,1,"Flying Evil Wing",0,"When receiving ATK based damage, 3% chance to cause [Curse] status effect on yourself.",14,120,0] //{ bonus bMaxSP,120; bonus3 bAddEffWhenHit,Eff_Curse,100,ATF_SELF; }
 ,[1255,999,0,1,0,0,20,70,"Fairy Ears (bRO)",0,"",11,3,0]
-,[1256,52,0,1,0,0,10,1,"4 Leaf Clover In Mouth",0,"",37,3,5,1,73,-1,0]
+,[1256,52,0,1,0,0,10,1,"4 Leaf Clover In Mouth",0,"",37,3,5,1,6,4,73,-1,0]
 ,[1257,999,51,5,0,1,300,65,"Sphinx Hat",0,"",1,5,0]
 ,[1258,50,0,3,0,0,80,70,"Anubis Hat",0,"",77,10,91,10,0]
 ,[1259,64,0,0,0,1,10,1,"Skull Ring",0,"",51,1,0]
