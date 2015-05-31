@@ -1260,7 +1260,7 @@ ItemOBJ = [
 ,[1253,50,0,2,0,0,20,45,"Whikebine's Black Cat Ears_",0,"",18,-50,9,10,10,3,70,10,0]
 ,[1254,50,0,3,0,1,10,1,"Flying Evil Wing",0,"When receiving ATK based damage, 3% chance to cause [Curse] status effect on yourself.",14,120,0] //{ bonus bMaxSP,120; bonus3 bAddEffWhenHit,Eff_Curse,100,ATF_SELF; }
 ,[1255,999,0,1,0,0,20,70,"Fairy Ears (bRO)",0,"",11,3,0]
-,[1256,52,0,1,0,0,10,1,"4 Leaf Clover In Mouth",0,"",37,3,5,1,6,4,73,-1,0]
+,[1256,52,0,1,0,0,10,1,"4 Leaf Clover In Mouth",0,"",37,3,5,1,73,-1,0]
 ,[1257,999,51,5,0,1,300,65,"Sphinx Hat",0,"",1,5,0]
 ,[1258,50,0,3,0,0,80,70,"Anubis Hat",0,"",77,10,91,10,0]
 ,[1259,64,0,0,0,1,10,1,"Skull Ring",0,"",51,1,0]
@@ -1317,7 +1317,7 @@ ItemOBJ = [
 ,[1310,64,0,1,0,0,50,80,"Dark Knight Glove [Type B]",0,"Small chance you gain MaxHP +10% for 10 seconds when receiving ATK based damage",0]
 ,[1311,100,0,0,0,0,0,0,"Dark Knight Set [Type A]",0,"",89,10,4,5,58,10,0]
 ,[1312,50,0,2,0,1,10,1,"Blue Night Cap",0,"",17,5,89,5,0]	//mejorable: no esta dando ATK
-,[1313,52,0,1,0,0,10,90,"Spiked Scarf",0,"",3,1,37,3,57,3,0]
+,[1313,52,0,1,0,0,10,90,"Spiked Scarf",0,"",3,1,37,1,57,1,0]
 ,[1314,6,999,75,3,"0/4",150,3,"Orcish Axe",0,"",0]	//repetido
 ,[1315,6,999,38,1,"3/4",80,3,"Axe",0,"",0]		//repetido
 ,[1316,51,0,1,0,0,10,50,"Hockey Mask",0,"<b>Mid and Low Headgear</b>",37,5,0]
@@ -1560,7 +1560,7 @@ ItemOBJ = [
 ,[1552,50,0,3,0,0,30,70,"Aries Diadem (iRO)",0,"<b>[Refine Rate 7~10]</b><br>DEF +1<br>MDEF +5",63,5,4,2,89,2,0]
 ,[1553,50,0,3,0,0,30,1,"Sagittarius Crown (iRO)",0,"<b>[Refine Rate 7~10]</b><br>ASPD +2%<br><b>[Refine Rate 8~10]</b><br>AGI +2<br><b>[Refine Rate 9~10]</b><br>Increases ranged damage by 3%<br><b>[Refine Rate 10]</b><br>When performing an ATK based attack, there's a chance you gain DEX +10 and AGI +10 for 10 seconds.",63,7,5,2,0]
 ,[1554,50,0,3,0,0,30,70,"Taurus Crown",0,"<b>[Refine Rate 7~10]</b><br>DEX +1<br>MATK +1%",62,5,5,2,74,2,0]
-,[1555,50,0,2,0,1,30,70,"Wanderer's Sakkat",0,"",2,2,37,4,0]
+,[1555,50,0,2,0,1,30,70,"Wanderer's Sakkat",0,"<b>[Refine Rate 6~10]</b><br>AGI +2<br>FLEE +2<br><b>[Refine Rate 8~10]</b><br>CRIT +10<br>ASPD +8%",2,2,9,3,0]
 ,[1556,100,0,0,0,0,0,0,"Whikebain Set",0,"<b>[Refine Rate 7~10]</b><br>CRIT +5 (not implemented)",70,10,0]
 ,[1557,50,0,0,0,1,50,60,"Telling Doll Hat (iRO)",0,"[White Potion] and [Condensed White Potion] heals you +10%",193,1,57,5,0]
 ,[1558,50,0,2,0,0,30,10,"Little Angel Doll (iRO)",0,"<b>[Refine Rate 5~10]</b><br>Increases the chance of casting [Grand Cross] Lv 1 when receiving melee damage.<BR><b>[Refine Rate 7~10]</b><br>Casts [Grand Cross] Lv 5 instead.",5,3,221,144,221,-145,0]
@@ -1760,6 +1760,9 @@ ItemOBJ = [
 ,[1751,51,0,3,0,0,100,10,"Demon Mask",0,"<b>Mid and Low Headgear</b><BR>Drains 2 SP from the user every 2 seconds.",12,1,0]
 ,[1752,100,0,0,0,0,0,0,"Demon Set",0,"ASPD +1<BR>Drains an additional 3 SP from the user every 2 seconds.",12,9,0]
 ,[1753,50,1,0,0,0,150,30,"Arbuz of Archer",0,"",5,2,25,5,0]
+,[1754,52,0,1,0,0,10,90,"Spiked Scarf (FreeRO)",0,"",3,1,37,3,57,3,0]
+,[1755,50,0,2,0,1,30,70,"Wanderer's Sakkat (FreeRO)",0,"",2,2,37,4,0]
+,[1756,52,0,1,0,0,10,1,"4 Leaf Clover In Mouth  (FreeRO)",0,"",37,3,5,1,6,4,73,-1,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
