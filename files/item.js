@@ -1759,6 +1759,7 @@ ItemOBJ = [
 ,[1750,64,1,0,0,0,15,75,"Foot Ring",0,"",3,3,15,10,0]
 ,[1751,51,0,3,0,0,100,10,"Demon Mask",0,"<b>Mid and Low Headgear</b><BR>Drains 2 SP from the user every 2 seconds.",12,1,0]
 ,[1752,100,0,0,0,0,0,0,"Demon Set",0,"ASPD +1<BR>Drains an additional 3 SP from the user every 2 seconds.",12,9,0]
+,[1753,50,1,0,0,0,150,30,"Arbuz of Archer",0,"",5,2,25,5,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
