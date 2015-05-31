@@ -1317,7 +1317,7 @@ ItemOBJ = [
 ,[1310,64,0,1,0,0,50,80,"Dark Knight Glove [Type B]",0,"Small chance you gain MaxHP +10% for 10 seconds when receiving ATK based damage",0]
 ,[1311,100,0,0,0,0,0,0,"Dark Knight Set [Type A]",0,"",89,10,4,5,58,10,0]
 ,[1312,50,0,2,0,1,10,1,"Blue Night Cap",0,"",17,5,89,5,0]	//mejorable: no esta dando ATK
-,[1313,52,0,1,0,0,10,90,"Spiked Scarf",0,"",3,1,37,1,57,3,0]
+,[1313,52,0,1,0,0,10,90,"Spiked Scarf",0,"",3,1,37,3,57,3,0]
 ,[1314,6,999,75,3,"0/4",150,3,"Orcish Axe",0,"",0]	//repetido
 ,[1315,6,999,38,1,"3/4",80,3,"Axe",0,"",0]		//repetido
 ,[1316,51,0,1,0,0,10,50,"Hockey Mask",0,"<b>Mid and Low Headgear</b>",37,5,0]
