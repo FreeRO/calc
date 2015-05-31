@@ -1763,6 +1763,7 @@ ItemOBJ = [
 ,[1754,52,0,1,0,0,10,90,"Spiked Scarf (FreeRO)",0,"",3,1,37,3,57,3,0]
 ,[1755,50,0,2,0,1,30,70,"Wanderer's Sakkat (FreeRO)",0,"",2,2,37,4,0]
 ,[1756,52,0,1,0,0,10,1,"4 Leaf Clover In Mouth (FreeRO)",0,"",37,3,5,1,6,4,73,-1,0]
+,[1757,50,0,1,0,0,50,50,"Ashura Priest Hat (FreeRO)",0,"",5,2,6,2,91,4,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
