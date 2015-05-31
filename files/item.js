@@ -1560,7 +1560,7 @@ ItemOBJ = [
 ,[1552,50,0,3,0,0,30,70,"Aries Diadem (iRO)",0,"<b>[Refine Rate 7~10]</b><br>DEF +1<br>MDEF +5",63,5,4,2,89,2,0]
 ,[1553,50,0,3,0,0,30,1,"Sagittarius Crown (iRO)",0,"<b>[Refine Rate 7~10]</b><br>ASPD +2%<br><b>[Refine Rate 8~10]</b><br>AGI +2<br><b>[Refine Rate 9~10]</b><br>Increases ranged damage by 3%<br><b>[Refine Rate 10]</b><br>When performing an ATK based attack, there's a chance you gain DEX +10 and AGI +10 for 10 seconds.",63,7,5,2,0]
 ,[1554,50,0,3,0,0,30,70,"Taurus Crown",0,"<b>[Refine Rate 7~10]</b><br>DEX +1<br>MATK +1%",62,5,5,2,74,2,0]
-,[1555,50,0,2,0,1,30,70,"Wanderer's Sakkat",0,"<b>[Refine Rate 6~10]</b><br>AGI +2<br>FLEE +2<br><b>[Refine Rate 8~10]</b><br>CRIT +10<br>ASPD +8%",2,2,9,3,0]
+,[1555,50,0,2,0,1,30,70,"Wanderer's Sakkat",0,"",2,2,37,4,0]
 ,[1556,100,0,0,0,0,0,0,"Whikebain Set",0,"<b>[Refine Rate 7~10]</b><br>CRIT +5 (not implemented)",70,10,0]
 ,[1557,50,0,0,0,1,50,60,"Telling Doll Hat (iRO)",0,"[White Potion] and [Condensed White Potion] heals you +10%",193,1,57,5,0]
 ,[1558,50,0,2,0,0,30,10,"Little Angel Doll (iRO)",0,"<b>[Refine Rate 5~10]</b><br>Increases the chance of casting [Grand Cross] Lv 1 when receiving melee damage.<BR><b>[Refine Rate 7~10]</b><br>Casts [Grand Cross] Lv 5 instead.",5,3,221,144,221,-145,0]
