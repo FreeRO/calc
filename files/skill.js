@@ -821,6 +821,7 @@ AutoSpellSkill = [
 [155,1,263,1,2,1],
 [156,1,382,1,5,1],
 [157,1,54,3,5,1],
-[158,1,51,5,3,4]
+[158,1,51,5,3,4],
+[159,1,128,3,2,1]
 ];
 //ID, selectable in "Attack Skills", skill ID, skill Lv, chance, trigger
