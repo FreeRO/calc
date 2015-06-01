@@ -1771,6 +1771,7 @@ ItemOBJ = [
 ,[1762,50,0,1,0,0,10,10,"Paporotnik (FreeRO)",0,'<font color="#FF0000"><b>MATK vs Elements currently <a href="https://github.com/FreeRO/calc/issues/3">not implemented</a>.</b></font>',220,19,41,9,42,9,49,9,651,9,652,9,659,9,0]
 ,[1763,50,1,2,0,0,10,0,"Mini Tree (FreeRO)",0,"",151,20,153,20,154,20,0]
 ,[1764,50,0,0,0,0,20,1,"Splash Hat (FreeRO)",0,"",193,1,2,1,221,159,0]
+,[1765,50,0,1,0,0,30,20,"Yoyo Hat (FreeRO)",0,"Small chance to obtain an [Cute Strawberry-Choco] item when killing a monster.",220,22,2,2,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
