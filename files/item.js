@@ -1780,7 +1780,10 @@ ItemOBJ = [
 ,[1771,50,0,1,0,1,10,10,"Купальский венок (FreeRO)",0,"",6,4,154,5,153,5,0]
 ,[1772,50,0,0,0,1,70,0,"Witch's Pumpkin Hat (FreeRO)",0,"",19,10,193,1,56,15,67,10,221,79,0]
 ,[1773,50,0,0,0,0,50,0,"Sweet Bonnet (FreeRO)",0,"",19,2,6,2,193,1,0]
-,[1774,50,0,0,0,0,60,0,"Solarise Hat (FreeRO)",0,"",4,1,14,100,193,1,0] 
+,[1774,50,0,0,0,0,60,0,"Solarise Hat (FreeRO)",0,"",4,1,14,100,193,1,0]
+,[1775,50,0,0,0,1,10,0,"Persica",0,"",9,1,14,20,0]
+,[1776,100,0,0,0,0,0,0,"Persica+Romantic Flower",0,"",14,30,4,1,0]
+,[1777,100,0,0,0,0,0,0,"Persica+Romantic Leaf",0,"",9,2,6,1,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
@@ -2264,8 +2267,10 @@ w_SE = [[737,436,475,"NULL"]
 ,[1761,1760,194,"NULL"]
 ,[1761,1760,378,"NULL"]
 ,[1761,1760,199,"NULL"]
-,[1761,1760,193,"NULL"] 
-,[1770,1768,1769,"NULL"] 
+,[1761,1760,193,"NULL"]
+,[1770,1768,1769,"NULL"]
+,[1776,1775,274,"NULL"]
+,[1777,1775,276,"NULL"]
 ];
 SE_MAXnum = w_SE.length -1;
 for(var i=0;i<=SE_MAXnum;i++){
