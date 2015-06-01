@@ -1764,6 +1764,10 @@ ItemOBJ = [
 ,[1755,50,0,2,0,1,30,70,"Wanderer's Sakkat (FreeRO)",0,"",2,2,37,4,0]
 ,[1756,52,0,1,0,0,10,1,"4 Leaf Clover In Mouth (FreeRO)",0,"",37,3,5,1,6,4,73,-1,0]
 ,[1757,50,0,1,0,0,50,50,"Ashura Priest Hat (FreeRO)",0,"",5,2,6,2,91,4,0]
+,[1758,52,0,1,0,0,1,1,"Foxtail (FreeRO)",0,"",1,1,5,1,6,2,0]
+,[1759,100,0,0,0,0,0,0,"Foxtail Set",0,"",5,1,0]
+,[1760,52,0,0,0,0,1,1,"Green Foxtail (FreeRO)",0,"",1,2,5,1,6,2,0]
+,[1761,100,0,0,0,0,0,0,"Green Foxtail Set",0,"",5,2,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
@@ -2236,6 +2240,16 @@ w_SE = [[737,436,475,"NULL"]
 ,[1749,1747,1748,"NULL"]
 ,[1752,1751,374,"NULL"]
 ,[1752,1751,377,"NULL"]
+,[1759,1758,375,"NULL"]
+,[1759,1758,194,"NULL"]
+,[1759,1758,378,"NULL"]
+,[1759,1758,199,"NULL"]
+,[1759,1758,193,"NULL"]
+,[1761,1760,375,"NULL"]
+,[1761,1760,194,"NULL"]
+,[1761,1760,378,"NULL"]
+,[1761,1760,199,"NULL"]
+,[1761,1760,193,"NULL"] 
 ];
 SE_MAXnum = w_SE.length -1;
 for(var i=0;i<=SE_MAXnum;i++){
