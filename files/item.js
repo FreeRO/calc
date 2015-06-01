@@ -1779,6 +1779,7 @@ ItemOBJ = [
 ,[1770,100,0,0,0,0,0,0,"Watermelon Set (FreeRO)",0,"",61,4,221,160,0]
 ,[1771,50,0,1,0,1,10,10,"Купальский венок (FreeRO)",0,"",6,4,154,5,153,5,0] 
 ,[1772,50,0,0,0,1,70,0,"Witch's Pumpkin Hat (FreeRO)",0,"",19,10,193,1,56,15,67,10,221,79,0]
+,[1773,50,0,0,0,0,50,0,"Sweet Bonnet (FreeRO)",0,"",19,2,6,2,193,1,0] 
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
