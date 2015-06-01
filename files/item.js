@@ -1768,6 +1768,7 @@ ItemOBJ = [
 ,[1759,100,0,0,0,0,0,0,"Foxtail Set",0,"",5,1,0]
 ,[1760,52,0,0,0,0,1,1,"Green Foxtail (FreeRO)",0,"",1,2,5,1,6,2,0]
 ,[1761,100,0,0,0,0,0,0,"Green Foxtail Set",0,"",5,2,0]
+,[1762,50,0,1,0,0,10,10,"Paporotnik (FreeRO)",0,'<font color="#FF0000"><b>MATK vs Elements currently <a href="https://github.com/FreeRO/calc/issues/3">not implemented</a>.</b></font>',220,19,41,9,42,9,49,9,651,9,652,9,659,9,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
@@ -2084,6 +2085,8 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Critical damage +"+ nC2 +"% against [" + SyuzokuOBJ[nC1-320] +"] race monster.<BR>";
 	if(330 <= nC1 && nC1 <=339)
 		CBIstr += "Receive "+ wIS + nC2 +"% damage from ["+ ZokuseiOBJ[nC1-330] +"] element monsters.<BR>";
+    if(650 <= nC1 && nC1 <=659)
+        CBIstr += "Deal"+ wIS + nC2 +"% MATK based damage against [" + ZokuseiOBJ[nC1-340] +"] element monsters.<BR>";
 	if(5000 <= nC1 && nC1 <= 6999)
 		CBIstr += "["+ SkillOBJ[nC1 -5000][2] +"] skill damage"+ wIS + nC2 +"%<BR>";
 	if(7000 <= nC1 && nC1 <= 8999){
