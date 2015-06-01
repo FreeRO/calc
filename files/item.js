@@ -1784,6 +1784,7 @@ ItemOBJ = [
 ,[1775,50,0,0,0,1,10,0,"Persica",0,"",9,1,14,20,0]
 ,[1776,100,0,0,0,0,0,0,"Persica+Romantic Flower",0,"",14,30,4,1,0]
 ,[1777,100,0,0,0,0,0,0,"Persica+Romantic Leaf",0,"",9,2,6,1,0]
+,[1778,50,0,3,0,0,20,20,"Octopus Hat",0,"",221,161,194,1,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
