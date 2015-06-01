@@ -1772,6 +1772,8 @@ ItemOBJ = [
 ,[1763,50,1,2,0,0,10,0,"Mini Tree (FreeRO)",0,"",151,20,153,20,154,20,0]
 ,[1764,50,0,0,0,0,20,1,"Splash Hat (FreeRO)",0,"",193,1,2,1,221,159,0]
 ,[1765,50,0,1,0,0,30,20,"Yoyo Hat (FreeRO)",0,"Small chance to obtain an [Cute Strawberry-Choco] item when killing a monster.",220,22,2,2,0]
+,[1766,50,0,2,0,1,15,0,"Awakened Bad Grader Cap (FreeRO)",0,"SP Cost is raised by 10%.",193,1,1,4,5,2,57,7,0]
+,[1767,50,0,2,0,1,15,0,"Awakened Brighthead Cap (FreeRO)",0,"SP Cost is raised by 15%.",193,1,4,1,5,3,120,7,121,7,122,7,123,7,124,7,125,7,126,7,127,7,128,7,129,7,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
