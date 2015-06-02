@@ -1789,6 +1789,7 @@ ItemOBJ = [
 ,[1780,100,0,0,0,0,0,0,"Lovely Top Hat+Monocle (FreeRO)",0,"",2,3,0]
 ,[1781,50,0,3,0,0,140,0,"Hungry Big Fish (FreeRO)",0,"",35,10,125,10,193,1,0]
 ,[1782,100,0,0,0,0,0,0,"Hungry Big Fish+Pantie[0]",0,"",152,100,0]
+,[1783,50,72,2,0,1,100,70,"Helm Of Abyss (FreeRO)",0,"",77,10,57,-10,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
