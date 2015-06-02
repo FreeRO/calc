@@ -1794,6 +1794,7 @@ ItemOBJ = [
 ,[1785,50,0,2,0,0,35,0,"Devil Egg Hat (FreeRO)",0,"Received healing items effectiveness +3%.",92,3,0]
 ,[1786,50,0,2,0,0,35,0,"Cute Egg Hat (FreeRO)",0,"",0]
 ,[1787,50,0,3,0,0,500,0,"Dark Pumpkin-head (FreeRO)",0,"When killing monsters, there's chance to drop a Pumpkin Pie.",19,7,193,1,0]
+,[1788,51,0,0,0,0,50,0,"Cursed Mask (FreeRO)",0,"",1,1,37,4,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
