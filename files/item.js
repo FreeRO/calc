@@ -1787,6 +1787,8 @@ ItemOBJ = [
 ,[1778,50,0,3,0,0,20,20,"Octopus Hat (FreeRO)",0,"",221,161,194,1,0]
 ,[1779,50,0,0,0,0,30,0,"Lovely Top Hat (FreeRO)",0,"",6,2,9,4,193,1,0]
 ,[1780,100,0,0,0,0,0,0,"Lovely Top Hat+Monocle (FreeRO)",0,"",2,3,0]
+,[1781,50,0,3,0,0,140,0,"Hungry Big Fish (FreeRO)",0,"",35,10,125,10,193,1,0]
+,[1782,100,0,0,0,0,0,0,"Hungry Big Fish+Pantie[0]",0,"",152,100,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
@@ -2275,6 +2277,7 @@ w_SE = [[737,436,475,"NULL"]
 ,[1776,1775,274,"NULL"]
 ,[1777,1775,276,"NULL"]
 ,[1780,1779,251,"NULL"]
+,[1782,1781,288,"NULL"] 
 ];
 SE_MAXnum = w_SE.length -1;
 for(var i=0;i<=SE_MAXnum;i++){
