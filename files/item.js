@@ -1796,6 +1796,7 @@ ItemOBJ = [
 ,[1787,50,0,3,0,0,500,0,"Dark Pumpkin-head (FreeRO)",0,"When killing monsters, there's chance to drop a Pumpkin Pie.",19,7,193,1,0]
 ,[1788,51,0,0,0,0,50,0,"Cursed Mask (FreeRO)",0,"",1,1,37,4,0]
 ,[1789,51,0,0,0,0,5,0,"Blush of Love (FreeRO)",0,"",57,3,0]
+,[1790,50,0,4,0,0,50,30,"Crabbie Claws (FreeRO)",0,"Every time you kill a [" + SyuzokuOBJ[5] +"] race monster, low chance to drop Crystal blue.",3,3,5,-1,151,4,221,122,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
