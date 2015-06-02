@@ -1785,6 +1785,8 @@ ItemOBJ = [
 ,[1776,100,0,0,0,0,0,0,"Persica+Romantic Flower",0,"",14,30,4,1,0]
 ,[1777,100,0,0,0,0,0,0,"Persica+Romantic Leaf",0,"",9,2,6,1,0]
 ,[1778,50,0,3,0,0,20,20,"Octopus Hat",0,"",221,161,194,1,0]
+,[1779,50,0,0,0,0,30,0,"Lovely Top Hat (FreeRO)",0,"",6,2,9,4,0]
+,[1780,100,0,0,0,0,0,0,"Lovely Top Hat+Monocle (FreeRO)",0,"",2,3,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
@@ -2272,6 +2274,7 @@ w_SE = [[737,436,475,"NULL"]
 ,[1770,1768,1769,"NULL"]
 ,[1776,1775,274,"NULL"]
 ,[1777,1775,276,"NULL"]
+,[1780,1779,251,"NULL"]
 ];
 SE_MAXnum = w_SE.length -1;
 for(var i=0;i<=SE_MAXnum;i++){
