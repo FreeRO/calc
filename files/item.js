@@ -1790,6 +1790,7 @@ ItemOBJ = [
 ,[1781,50,0,3,0,0,140,0,"Hungry Big Fish (FreeRO)",0,"",35,10,125,10,193,1,0]
 ,[1782,100,0,0,0,0,0,0,"Hungry Big Fish+Pantie[0]",0,"",152,100,0]
 ,[1783,50,72,2,0,1,100,70,"Helm Of Abyss (FreeRO)",0,"",77,10,57,-10,0]
+,[1784,50,1,2,0,0,60,18,"Green Ale Hat (FreeRO)",0,"Enables the use of [Increase Recuperative Power] Lv 3 and [Increase Spiritual Power] Lv 3<br><b>NOTE: Both skills are available in <i>Other Info</i>.</b>",11,5,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
