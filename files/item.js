@@ -1791,6 +1791,8 @@ ItemOBJ = [
 ,[1782,100,0,0,0,0,0,0,"Hungry Big Fish+Pantie[0]",0,"",152,100,0]
 ,[1783,50,72,2,0,1,100,70,"Helm Of Abyss (FreeRO)",0,"",77,10,57,-10,0]
 ,[1784,50,1,2,0,0,60,18,"Green Ale Hat (FreeRO)",0,"Enables the use of [Increase Recuperative Power] Lv 3 and [Increase Spiritual Power] Lv 3<br><b>NOTE: Both skills are available in <i>Other Info</i>.</b>",11,5,0]
+,[1785,50,0,2,0,0,35,0,"Devil Egg Hat (FreeRO)",0,"Received healing items effectiveness +3%.",92,3,0]
+,[1786,50,0,2,0,0,35,0,"Cute Egg Hat (FreeRO)",0,"",0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
