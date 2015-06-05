@@ -1798,8 +1798,6 @@ ItemOBJ = [
 ,[1789,51,0,0,0,0,5,0,"Blush of Love (FreeRO)",0,"",57,3,0]
 ,[1790,50,0,4,0,0,50,30,"Crabbie Claws (FreeRO)",0,"Every time you kill a [" + SyuzokuOBJ[5] +"] race monster, low chance to drop Crystal blue.",3,3,5,-1,151,4,221,122,0]
 ,[1791,50,0,2,0,0,35,0,"Holy Egg Hat (FreeRO)",0,"Restores 30 HP every 10 seconds. <br><font color=red><b>[Calculation of those currently not implemented]</b></font> <br><b>[Event Bonus, действует весной]</b> MaxHP + 300<br>Restores 100 HP every 10 seconds. <br><b>[Refine Rate 5~10]</b> <br>Flee +2. <br><b>[Refine Rate 8~10]</b> <br>Restores 40 SP every 10 seconds. ",13,70,0]
-,[1792,10,76,135,3,1,150,80,"Elven Bow (FreeRO)",0,"",25,-100,5,2,0]
-,[1793,0,0,0,0,0,0,0,"",0,"",25,100,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
@@ -2288,8 +2286,7 @@ w_SE = [[737,436,475,"NULL"]
 ,[1776,1775,274,"NULL"]
 ,[1777,1775,276,"NULL"]
 ,[1780,1779,251,"NULL"]
-,[1782,1781,288,"NULL"]
-,[1793,1792,253,"NULL"]
+,[1782,1781,288,"NULL"] 
 ];
 SE_MAXnum = w_SE.length -1;
 for(var i=0;i<=SE_MAXnum;i++){
