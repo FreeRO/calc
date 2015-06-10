@@ -1800,6 +1800,7 @@ ItemOBJ = [
 ,[1791,50,0,2,0,0,35,0,"Holy Egg Hat (FreeRO)",0,"Restores 30 HP every 10 seconds. <br><font color=red><b>[Calculation of those currently not implemented]</b></font> <br><b>[Event Bonus, действует весной]</b> MaxHP + 300<br>Restores 100 HP every 10 seconds. <br><b>[Refine Rate 5~10]</b> <br>Flee +2. <br><b>[Refine Rate 8~10]</b> <br>Restores 40 SP every 10 seconds. ",13,70,0]
 ,[1792,10,76,135,3,1,150,80,"Elven Bow (FreeRO)",0,"",25,-100,5,2,0]
 ,[1793,0,0,0,0,0,0,0,"Elven Set",0,"",25,100,0]
+,[1794,51,0,1,0,0,40,70,"Stucked Bolts (FreeRO)",0,"",2,1,221,162,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
