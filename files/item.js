@@ -28,8 +28,8 @@ ItemOBJ = [
 ,[21,2,1,100,2,"2/3",90,14,"Ring Pommel Saber",0,"",0]
 ,[22,2,1,75,3,0,140,48,"Sashimi",0,"40% chance to obtain a [Sushi] item when killing ["+SyuzokuOBJ[5]+"] race monsters.",20,4,0]
 ,[23,2,0,90,3,0,80,5,"Orcish Sword",0,"",194,1,0]
-,[24,2,1,104,3,0,220,68,"Jeweled Sword",0,"Draws jewels out from fallen monsters",0]
-,[25,2,1,140,3,0,250,74,"Gaia Sword",0,"Draws ore out from fallen monsters",0]
+,[24,2,1,104,3,0,220,68,"Jeweled Sword",0,"10% chance to get jewels when killing a monster.",0]
+,[25,2,1,140,3,0,250,74,"Gaia Sword",0,"3% chance to get ore when killing a monster.",0]
 ,[26,2,1,115,3,"2/3",100,27,"Sabre",0,"",0]
 ,[27,2,1,120,3,"1/2",90,27,"Haedonggum",0,"",4,3,0]
 ,[28,2,113,125,3,0,135,75,"Holy Avenger",0,"",3,2,20,6,0]
@@ -265,13 +265,13 @@ ItemOBJ = [
 ,[258,51,0,1,0,0,10,1,"Purple Glasses",0,"",154,10,0]
 ,[259,51,54,1,0,0,10,50,"Binoculars",0,"",5,1,0]
 ,[260,51,0,1,0,0,10,1,"Angled Glasses",0,"",0]
-,[261,51,1,1,0,0,10,1,"Gas Mask",0,"<b>Mid and Low Headgear</b>",150,30,0]
-,[262,51,1,1,0,0,10,1,"Goblin Mask",0,"<b>Mid and Low Headgear</b>",0]
-,[263,51,1,1,0,0,10,1,"Mr. Scream",0,"<b>Mid and Low Headgear</b>",0]
-,[264,51,0,1,0,0,10,1,"Mr. Smile",0,"<b>Mid and Low Headgear</b>",0]
+,[261,51,1,1,0,0,10,1,"Gas Mask",0,"",200,3,150,30,0]
+,[262,51,1,1,0,0,10,1,"Goblin Mask",0,"",200,3,0]
+,[263,51,1,1,0,0,10,1,"Mr. Scream",0,"",200,3,0]
+,[264,51,0,1,0,0,10,1,"Mr. Smile",0,"",200,3,0]
 ,[265,51,51,2,0,0,30,65,"Fin Helm",0,"",0]
 ,[266,51,1,2,0,0,20,1,"Opera Masque",0,"",0]
-,[267,51,56,2,0,0,30,50,"Welding Mask",0,"<b>Mid and Low Headgear</b>",63,10,0]
+,[267,51,56,2,0,0,30,50,"Welding Mask",0,"",200,3,63,10,0]
 ,[268,52,0,0,0,0,0,0,"(No Lower Headgear)",0,"",0]
 ,[269,52,1,0,0,0,10,1,"Cigarette",0,"",54,3,0]
 ,[270,52,0,0,0,0,10,1,"Gangster Mask",0,"",156,15,0]
@@ -368,8 +368,8 @@ ItemOBJ = [
 ,[361,50,1,1,0,0,50,1,"Lazy Smokie",0,"",155,20,0]
 ,[362,51,0,1,0,0,10,45,"Small Ribbons",0,"",0]
 ,[363,50,0,2,0,0,50,50,"Blue Fish",0,"",35,10,0]
-,[364,51,1,2,0,0,10,1,"Alarm Mask",0,"<b>Mid and Low Headgear</b>",154,50,0]
-,[365,50,1,2,0,0,20,35,"Decorative Golden Bell",0,"<b>Mid and Upper Headgear</b>",0]
+,[364,51,1,2,0,0,10,1,"Alarm Mask",0,"",200,3,154,50,0]
+,[365,50,1,2,0,0,20,35,"Decorative Golden Bell",0,"",200,1,0]
 ,[366,50,0,2,0,0,10,1,"Decorative Mushroom",0,"",0]
 ,[367,50,0,2,0,0,20,45,"Black Cat Ears",0,"",0]
 ,[368,50,1,2,0,0,70,1,"Model Training Hat",0,"",5,2,0]
@@ -384,13 +384,13 @@ ItemOBJ = [
 ,[377,50,1,4,0,0,80,70,"Succubus Horns",0,"",4,1,19,10,0]
 ,[378,50,1,4,0,0,35,1,"Sombrero",0,"",2,1,0]
 ,[379,50,1,5,0,0,90,55,"Orc Hero Helm",0,"",1,2,3,1,0]
-,[380,50,81,5,0,0,30,65,"Coif",0,"<b>Mid and Upper Headgear</b>",0]
+,[380,50,81,5,0,0,30,65,"Coif",0,"",200,1,0]
 ,[381,51,0,1,0,0,10,70,"Evil Wing Ears",0,"",1,1,0]
-,[382,51,0,1,0,0,10,1,"Surprised Mask",0,"<b>Mid and Low Headgear</b>",0]
-,[383,51,0,1,0,0,10,1,"Poker Face",0,"<b>Mid and Low Headgear</b>",0]
-,[384,51,0,1,0,0,10,1,"Annoyed Mask",0,"<b>Mid and Low Headgear</b>",0]
+,[382,51,0,1,0,0,10,1,"Surprised Mask",0,"",200,3,0]
+,[383,51,0,1,0,0,10,1,"Poker Face",0,"",200,3,0]
+,[384,51,0,1,0,0,10,1,"Annoyed Mask",0,"",200,3,0]
 ,[385,51,0,1,0,0,10,70,"Angel Wing Ears",0,"",1,1,0]
-,[386,51,0,2,0,0,10,1,"Goblin Leader Mask",0,"<b>Mid and Low Headgear</b>",0]
+,[386,51,0,2,0,0,10,1,"Goblin Leader Mask",0,"",200,3,0]
 ,[387,1,1,75,4,0,50,36,"Kitchen Knife",0,"50% chance to obtain a [Meat] item when killing a ["+SyuzokuOBJ[2]+"] race monster.",37,3,10,30,0]
 ,[388,1,1,80,4,0,60,36,"Ice Pick",0,"",23,1,0]
 ,[389,1,1,84,4,0,40,1,"Princess Knife",0,"",7,1,0]
@@ -457,7 +457,7 @@ ItemOBJ = [
 ,[450,50,0,2,0,0,40,50,"Tiger Mask",0,"",1,3,13,100,193,1,0]
 ,[451,14,0,110,4,0,180,70,"Electric Guitar",0,"",20,4,2,1,4,2,220,9,221,9,0]
 ,[452,51,1,0,0,0,10,1,"Takius Blindfold",0,"",4,2,0]
-,[453,50,81,5,0,1,30,65,"Coif",0,"<b>Mid and Upper Headgear</b>",14,100,0]
+,[453,50,81,5,0,1,30,65,"Coif",0,"",200,1,14,100,0]
 ,[454,64,0,0,0,0,0,1,"The Sign",0,"",80,5,89,5,0]
 ,[455,50,0,1,0,0,30,30,"Magic Eyes",0,"All skill's SP cost +20%",19,5,73,-10,0]
 ,[456,50,0,0,0,0,20,10,"Hibiscus",0,"",19,5,4,1,5,1,193,1,0]
@@ -513,7 +513,7 @@ ItemOBJ = [
 ,[506,50,0,3,0,1,35,1,"Renown Detective's Cap",0,"",0]
 ,[507,50,0,1,0,0,20,1,"Banana Hat",0,"",221,10,0]
 ,[508,50,0,0,0,0,10,1,"Mystic Rose",0,"",53,2,0]
-,[509,50,1,3,0,0,40,70,"Zealotus Mask",0,"<b>Upper and Mid Headgear</b>",37,5,57,5,0]
+,[509,50,1,3,0,0,40,70,"Zealotus Mask",0,"",200,1,37,5,57,5,0]
 ,[510,61,50,3,0,0,1,1,"Novice Guard",0,"",193,1,0]
 ,[511,61,50,3,0,1,100,30,"Novice Shield",0,"",61,20,62,20,63,20,64,20,65,20,66,20,67,20,68,20,69,20,0]
 ,[512,62,50,2,0,0,1,1,"Somber Novice Hood",0,"",193,1,0]
@@ -679,7 +679,7 @@ ItemOBJ = [
 ,[672,50,0,3,0,1,40,60,"Magistrate Hat",0,"<b>[Taekwon Class]</b><br>AGI +1, HP Recovery Rate +3%",0]
 ,[673,50,0,3,0,1,40,60,"Ayam",0,"<b>[Taekwon Class]</b><br>INT +1, SP Recovery Rate +3%",0]
 ,[674,999,0,0,0,0,10,1,"HORIORUGORU",0,"[description translation missing - ItemID: 674]",0]
-,[675,50,0,4,0,1,50,40,"Bride Mask",0,"<b>[Taekwon Class]</b><br>LUK +2, CRIT +5<br><b>Upper and Mid Headgear</b>",0]
+,[675,50,0,4,0,1,50,40,"Bride Mask",0,"<b>[Taekwon Class]</b><br>LUK +2, CRIT +5",200,1,0]
 ,[676,50,0,5,0,1,50,40,"Mythical Lion Mask",0,"<b>[Taekwon Class]</b><br>DEX +2<br>ATK +(refine * 2)<br>When performing a melee ATK based attack, 10% chance to cause [Stun] status effect on your target.",0]
 ,[677,51,0,0,0,0,10,1,"Censor Bar",0,"",19,1,8,-5,153,5,0]
 ,[678,51,0,2,0,0,10,30,"Hahoe Mask",0,"<b>[Taekwon Class]</b><br>LUK +1, Perfect Dodge +2",0]
@@ -832,7 +832,7 @@ ItemOBJ = [
 ,[825,9,55,30,3,0,50,50,"Release of Wish",0,"When dealing MATK based damage, 1% chance to recover 100 SP and 50 HP every 2 second for 10 seconds (a total of 500 SP and 250 HP).",89,15,4,3,91,5,94,5,0]
 ,[826,50,0,0,0,0,50,1,"Knit Hat Earmuffs",0,"",4,2,0]
 ,[827,50,1,2,0,1,30,40,"Rideword Hat",0,"5% chance to absorb 8% HP when performing an ATK based attack.<br>1% chance to absorb 4% SP when performing an ATK based attack.<br>Consumes 10 HP every 5 seconds.",0]
-,[828,50,2082,5,0,1,25,1,"Dark Bacilium",0,"Each refine increases resistance by 2%<br><b>Upper, Mid and Low Headgear</b>",159,20,152,20,151,20,0]
+,[828,50,2082,5,0,1,25,1,"Dark Bacilium",0,"Each refine increases resistance by 2%",200,4,159,20,152,20,151,20,0]
 ,[829,60,3089,6,0,1,30,60,"Diabolus Robe",0,"",14,150,19,5,74,10,91,6,0]
 ,[830,60,3072,7,0,1,60,60,"Diabolus Armor",0,"",19,5,1,2,5,1,13,150,151,5,159,5,0]
 ,[831,61,63,5,0,0,60,50,"Exorcism Bible",0,"",4,1,75,3,76,3,0]
@@ -876,7 +876,7 @@ ItemOBJ = [
 ,[869,50,1,2,0,0,30,20,"Soul Ring",0,"",19,2,221,134,0]
 ,[870,50,0,2,0,1,10,1,"Santa Poring Cap",0,"",19,2,47,3,67,3,193,2,0]
 ,[871,50,0,3,0,1,20,1,"Bell Ribbon",0,"",3,1,220,12,0]
-,[872,50,0,4,0,1,50,1,"Phoenix Crown",0,"Each refine adds a 1% of boss type reduction<br><b>Mid and Upper Headgear</b>",19,3,0]
+,[872,50,0,4,0,1,50,1,"Phoenix Crown",0,"Each refine adds a 1% of boss type reduction.",200,1,19,3,0]
 ,[873,51,0,2,0,0,20,1,"Tongue Mask",0,"Movement Speed +25% (same as Increase AGI)",0]
 ,[874,51,0,0,0,0,10,1,"Blank Eyes",0,"",0]
 ,[875,50,0,0,0,0,30,1,"Coppola",0,"",0]
@@ -1020,7 +1020,7 @@ ItemOBJ = [
 ,[1013,50,0,2,0,1,10,1,"Fanta Orange Can",0,"",0]
 ,[1014,50,0,2,0,1,10,1,"Fanta Grape Can",0,"",0]
 ,[1015,50,0,2,0,1,10,1,"Coca-Cola Can",0,"",0]
-,[1016,50,0,6,0,0,10,1,"Paper Bag Hat",0,"<b>Upper, Mid and Low Headgear</b>",57,4,151,4,13,100,0]
+,[1016,50,0,6,0,0,10,1,"Paper Bag Hat",0,"",200,4,57,4,151,4,13,100,0]
 ,[1017,50,0,2,0,1,10,1,"Flower Tea Cap",0,"",2,1,0]
 ,[1018,50,0,2,0,1,10,1,"Coca-Cola Cap",0,"",1,1,0]
 ,[1019,50,0,0,0,1,10,10,"Happy Wig",0,"",60,1,221,48,0]
@@ -1269,7 +1269,7 @@ ItemOBJ = [
 ,[1262,52,0,0,0,0,0,1,"Gentleman's Pipe",0,"",57,2,0]
 ,[1263,51,0,6,0,0,0,1,"Blush of Groom",0,"",57,3,0]
 ,[1264,50,0,0,0,1,10,1,"Purple Cowboy Hat",0,"",4,2,3,2,14,50,0]
-,[1265,50,0,2,0,1,30,1,"Dark Randgris Helm",0,"<b>Upper and Mid Headgear</b>",5,3,19,1,0]
+,[1265,50,0,2,0,1,30,1,"Dark Randgris Helm",0,"",200,1,5,3,19,1,0]
 ,[1266,50,0,2,0,0,70,10,"AFK Hat",0,"",0]
 ,[1267,50,0,0,0,0,10,10,"Afro Wig",0,"When receiving ATK based damage, 30% chance to cast [First Aid] on yourself.",60,1,0]
 ,[1268,50,0,0,0,0,10,1,"Angel Blessing",0,"",193,1,6,1,66,5,0,]
@@ -1320,8 +1320,8 @@ ItemOBJ = [
 ,[1313,52,0,1,0,0,10,90,"Spiked Scarf",0,"",3,1,37,1,57,1,0]
 ,[1314,6,999,75,3,"0/4",150,3,"Orcish Axe",0,"",0]	//repetido
 ,[1315,6,999,38,1,"3/4",80,3,"Axe",0,"",0]		//repetido
-,[1316,51,0,1,0,0,10,50,"Hockey Mask",0,"<b>Mid and Low Headgear</b>",37,5,0]
-,[1317,50,0,4,0,1,25,25,"Jaguar Hat","<b>Upper, Mid and Low Headgear</b>","",19,2,220,45,0]
+,[1316,51,0,1,0,0,10,50,"Hockey Mask",0,"",200,3,37,5,0]
+,[1317,50,0,4,0,1,25,25,"Jaguar Hat",0,"",200,4,19,2,220,45,0]
 ,[1318,50,0,5,0,0,25,1,"I Love China",0,"",5,3,57,10,0]
 ,[1319,52,0,0,0,0,10,10,"Well-Chewed Pencil",0,"",5,2,8,3,0]
 ,[1320,52,0,1,0,0,10,90,"Rainbow Scarf",0,"",19,2,4,1,89,1,0]
@@ -1493,7 +1493,7 @@ ItemOBJ = [
 ,[1485,50,0,3,0,0,30,70,"Pisces Crown (aRO)",0,"<b>[Refine Rate 7~10]</b><br>DEF +1<br>MATK +2%",61,5,19,5,4,2,0]
 ,[1486,50,0,3,0,0,30,70,"Taurus Crown (iRO)",0,"<b>[Refine Rate 7~10]</b><br>DEF +2<br>["+ZokuseiOBJ[3]+"] element resistance +7%",5,2,3,2,0]
 ,[1487,50,0,3,0,0,30,70,"Taurus Diadem (iRO)",0,"<b>[Refine Rate 7~10]</b><br>DEF +2<br>VIT +2",62,5,5,2,0]
-,[1488,50,0,2,0,0,200,1,"Chinese Crown",0,"Each refine adds a 1% of boss type reduction<br><b>Mid and Upper Headgear</b>",19,2,4,1,151,10,0]
+,[1488,50,0,2,0,0,200,1,"Chinese Crown",0,"Each refine adds a 1% of boss type reduction.",200,1,19,2,4,1,151,10,0]
 ,[1489,2,1001,180,3,0,220,80,"Chrome Metal Sword (aRO)",0,"",2,1,15,-5,194,1,0]
 ,[1490,999,1070,170,3,1,150,50,"Ruber",0,"When dealing ATK based damage, 0.5% chance to increase [Bash] and [Bowling Bash] skills damage +20% for 15 seconds.",0]		//repetido
 ,[1491,10,1110,160,3,1,150,80,"Elven Bow (aRO)",0,"<b>If equipped together with [Elven Arrow]:</b><BR>Increases ranged damage by 50%",5,2,0]
@@ -1567,8 +1567,8 @@ ItemOBJ = [
 ,[1559,50,0,1,0,1,100,1,"Rabbit Bonnet",0,"",4,2,74,3,0]
 ,[1560,50,0,10,0,0,30,20,"Witch's Pumpkin Hat",0,"",19,10,1,2,4,2,171,15,176,15,0]
 ,[1561,50,0,10,0,0,30,20,"Witch's Pumpkin Hat (iRO)",0,"",19,10,1,2,4,2,31,15,36,15,0]
-,[1562,51,0,1,0,0,10,1,"Gozarian Mask",0,"<b>Mid and Low Headgear</b>",0]
-,[1563,51,0,0,0,0,10,1,"Gozarian Mask (iRO)",0,"<b>Mid and Low Headgear</b>",7,1,0]
+,[1562,51,0,1,0,0,10,1,"Gozarian Mask",0,"",200,3,0]
+,[1563,51,0,0,0,0,10,1,"Gozarian Mask (iRO)",0,"",200,3,7,1,0]
 ,[1564,100,0,0,0,0,0,0,"Witch's Smile Set",0,"0'01% chance to drop a [Pumpkin Pie] item when killing a monster.",0]
 ,[1565,100,0,0,0,0,0,0,"Witch's Opera Set",0,"",9,10,131,10,0]
 ,[1566,100,0,0,0,0,0,0,"Witch's Alarm Set",0,"0'01% chance to drop a [Pumpkin Pie] item when killing a monster.<BR>0'01% chance to drop a [Well-baked Cookie] item when killing a monster.<BR>[Pumpkin Pie] and [Well-baked Cookie] recover +100%",0]
@@ -1639,29 +1639,29 @@ ItemOBJ = [
 ,[1631,50,0,5,0,1,40,1,"Rune Cloth Circlet",0,"Add a 10% chance of recovery HP/SP when the user receives Physical damage.",8,5,60,3,0]
 ,[1632,52,0,1,0,0,5,1,"Angeling Pink Ballon",0,"ASPD +1",13,200,0]
 ,[1633,52,0,2,0,0,0,1,"Bubble Gum In Mouth",0,"When used with a gold netcafe account, Item drop rate +5%.",19,2,17,5,88,5,0]
-,[1634,9,111,30,4,2,90,60,"Aqua Staff",0,"",196,4,20,1,194,1,4,3,88,230,5054,12,5055,12,0]
-,[1635,9,111,30,4,1,90,60,"Empowered Aqua Staff",0,"",4,5,88,270,5054,30,5055,30,0]
+,[1634,9,111,30,4,2,90,60,"Aqua Staff",0,"",195,1,196,4,20,1,194,1,4,3,88,230,5054,12,5055,12,0]
+,[1635,9,111,30,4,1,90,60,"Empowered Aqua Staff",0,"",195,1,4,5,88,270,5054,30,5055,30,0]
 ,[1636,60,111,8,0,0,50,60,"Aqua Robe",0,"Decreases [Storm Gust] variable cast time by 3 seconds.<br>[Base INT >= 120] INT +1.",196,4,198,1,19,5,4,1,0]
 ,[1637,63,111,12,0,0,50,60,"Aqua Shoes",0,"",196,4,19,2,13,500,61,15,0]
 ,[1638,64,111,2,0,0,20,60,"Aqua Orb",0,"",196,4,19,2,4,1,61,15,221,148,0]
 ,[1639,100,0,0,0,0,0,0,"Aqua Staff [2] + Aqua Shoes [1] + Aqua Orb [1] + Aqua Robe",0,"",64,-50,5054,40,5055,40,5128,40,5130,40,5131,40,5056,-30,5057,-30,5126,-30,5127,-30,0]
 ,[1640,100,0,0,0,0,0,0,"Empowered Aqua Staff [1] + Aqua Shoes [1] + Aqua Orb [1] + Aqua Robe",0,"",64,-50,5054,60,5055,60,5128,60,5130,60,5131,60,5056,-60,5057,-60,5126,-60,5127,-60,0]
-,[1641,9,111,30,4,2,90,60,"Forest Staff",0,"",196,4,20,2,194,1,4,3,88,230,5132,10,5133,10,0]
-,[1642,9,111,30,4,1,90,60,"Empowered Forest Staff",0,"",4,5,88,270,5132,30,5133,30,0]
+,[1641,9,111,30,4,2,90,60,"Forest Staff",0,"",195,1,196,4,20,2,194,1,4,3,88,230,5132,10,5133,10,0]
+,[1642,9,111,30,4,1,90,60,"Empowered Forest Staff",0,"",195,1,4,5,88,270,5132,30,5133,30,0]
 ,[1643,60,111,7,0,0,50,60,"Forest Robe",0,"Decreases [Heaven's Drive] variable cast time by 3 seconds.<br>[Base INT >= 120] INT +1.",196,4,198,2,19,5,4,1,0]
 ,[1644,63,111,12,0,0,50,60,"Forest Shoes",0,"",196,4,19,2,13,500,62,15,0]
 ,[1645,64,111,2,0,0,20,60,"Forest Orb",0,"",196,4,19,2,4,1,62,15,221,149,0]
 ,[1646,100,0,0,0,0,0,0,"Forest Staff [2] + Forest Shoes [1] + Forest Orb [1] + Forest Robe",0,"",63,-50,5132,40,5133,40,5051,-30,5052,-30,5053,-30,5122,-30,5124,-30,5125,-30,0]
 ,[1647,100,0,0,0,0,0,0,"Empowered Forest Staff [1] + Forest Shoes [1] + Forest Orb [1] + Forest Robe",0,"",63,-50,5132,60,5133,60,5051,-60,5052,-60,5053,-60,5122,-60,5124,-60,5125,-60,0]
-,[1648,9,111,30,4,2,90,60,"Crimson Staff",0,"",196,4,20,3,194,1,4,3,88,230,5051,10,5052,10,0]
-,[1649,9,111,30,4,1,90,60,"Empowered Crimson Staff",0,"",4,5,88,270,5051,30,5052,30,0]
+,[1648,9,111,30,4,2,90,60,"Crimson Staff",0,"",195,1,196,4,20,3,194,1,4,3,88,230,5051,10,5052,10,0]
+,[1649,9,111,30,4,1,90,60,"Empowered Crimson Staff",0,"",195,1,4,5,88,270,5051,30,5052,30,0]
 ,[1650,60,111,7,0,0,50,60,"Crimson Robe",0,"Decreases [Meteor Storm] variable cast time by 3 seconds.<br>[Base INT >= 120] INT +1.",196,4,198,3,19,5,4,1,0]
 ,[1651,63,111,12,0,0,50,60,"Crimson Shoes",0,"",196,4,19,2,13,500,63,15,0]
 ,[1652,64,111,2,0,0,20,60,"Crimson Orb",0,"",196,4,19,2,4,1,63,15,221,150,0]
 ,[1653,100,0,0,0,0,0,0,"Crimson Staff [2] + Crimson Shoes [1] + Crimson Orb [1] + Crimson Robe",0,"",61,-50,5051,40,5052,40,5053,40,5122,40,5124,40,5125,40,5054,-30,5055,-30,5128,-30,5130,-30,5131,-30,0]
 ,[1654,100,0,0,0,0,0,0,"Empowered Crimson Staff [1] + Crimson Shoes [1] + Crimson Orb [1] + Crimson Robe",0,"",61,-50,5051,60,5052,60,5053,60,5122,60,5124,60,5125,60,5054,-60,5055,-60,5128,-60,5130,-60,5131,-60,0]
-,[1655,9,111,30,4,2,90,60,"Golden Rod Staff",0,"",196,4,20,4,194,1,4,3,88,230,5126,12,0]
-,[1656,9,111,30,4,1,90,60,"Empowered Golden Rod Staff",0,"",4,5,88,270,5126,30,0]
+,[1655,9,111,30,4,2,90,60,"Golden Rod Staff",0,"",195,1,196,4,20,4,194,1,4,3,88,230,5126,12,0]
+,[1656,9,111,30,4,1,90,60,"Empowered Golden Rod Staff",0,"",195,1,4,5,88,270,5126,30,0]
 ,[1657,60,111,7,0,0,50,60,"Golden Rod Robe",0,"Decreases [Lord of Vermillion] variable cast time by 3 seconds.<br>[Base INT >= 120] INT +1.",196,4,198,4,19,5,4,1,0]
 ,[1658,63,111,12,0,0,50,60,"Golden Rod Shoes",0,"",196,4,19,2,13,500,64,15,0]
 ,[1659,64,111,2,0,0,20,60,"Golden Rod Orb",0,"",196,4,19,2,4,1,64,15,221,151,0]
@@ -1757,7 +1757,7 @@ ItemOBJ = [
 ,[1748,63,0,1,0,0,20,1,"Beach Sandals",0,"",1,1,4,1,2,1,63,10,0]
 ,[1749,100,0,0,0,0,0,0,"Beach Set",0,"",9,5,0]
 ,[1750,64,1,0,0,0,15,75,"Foot Ring",0,"",3,3,15,10,0]
-,[1751,51,0,3,0,0,100,10,"Demon Mask",0,"<b>Mid and Low Headgear</b><BR>Drains 2 SP from the user every 2 seconds.",12,1,0]
+,[1751,51,0,3,0,0,100,10,"Demon Mask",0,"Drains 2 SP from the user every 2 seconds.",200,3,12,1,0]
 ,[1752,100,0,0,0,0,0,0,"Demon Set",0,"ASPD +1<BR>Drains an additional 3 SP from the user every 2 seconds.",12,9,0]
 ,[1753,50,1,0,0,0,150,30,"Arbuz of Archer",0,"",5,2,25,5,0]
 ,[1754,52,0,1,0,0,10,90,"Spiked Scarf (FreeRO)",0,"",3,1,37,3,57,3,0]
@@ -1808,17 +1808,13 @@ ItemOBJ = [
 ItemMax = ItemOBJ.length -1;
 
 
-function ClickB_Item(CBI)
-{
-//	alert("n_itemSW="+n_itemSW+"\n CBI="+CBI);
+function ClickB_Item(CBI){
 	if(CBI == "SW"){
 		if(n_itemSW)
 			n_itemSW=0;
 		else
 			n_itemSW=1;
 	}
-//	alert("n_itemSW="+n_itemSW+"\n CBI="+CBI);
-
 	if(n_itemSW==1 && CBI == "SW" && Item_or_Card == "Card"){
 		Card(ItemCardNumberCheck);
 		return;
@@ -1929,7 +1925,7 @@ function Item_Setumei(nC1,nC2)
 	if(23 == nC1)
 		CBIstr += "Your damage depends on your target's VIT and DEF<br><b><font color=red>NOTE:</font> [VIT+DEF]>100, +1% for each value above 100 | [VIT+DEF]<100, -1% for each value below 100</b><BR>";
 	if(24 == nC1)
-		CBIstr += "Reduces your defence by 1/"+ nC2 +"<BR>";
+		CBIstr += "Reduces your defence to 1/"+ nC2 +"<BR>";
 	if(25 == nC1)
 //		CBIstr += "Increases ranged damage by "+ nC2 +"%<BR>";
 		CBIstr += "Deal"+ wIS + nC2 +"% ranged ATK based damage.<BR>";	//bonus bLongAtkRate ¿aumenta el daño de ataques mágicos?
@@ -2069,6 +2065,12 @@ function Item_Setumei(nC1,nC2)
 	}
 	if(198 == nC1)
 		CBIstr += "Armor becomes "+ ZokuseiOBJ[nC2] +" element.<BR>";
+	if(200 == nC1){
+		if(nC2 == 1) CBIstr += "<B>Upper and Mid Headgear</B><BR>";
+		if(nC2 == 2) CBIstr += "<B>Upper and Low Headgear</B><BR>";
+		if(nC2 == 3) CBIstr += "<B>Mid and Low Headgear</B><BR>";
+		if(nC2 == 4) CBIstr += "<B>Upper, Mid, and Low Headgear</B><BR>";
+	}
 	if(212 <= nC1 && nC1 <= 215)
 		CBIstr += wNAME1[nC1 -210] + wIS + nC2 +"<BR>";
 	if(220 == nC1)

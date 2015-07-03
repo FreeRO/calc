@@ -26,7 +26,7 @@ p {color:#E00; font-weight:bold;}
 .main {border:1px solid #999; background-color:#FFF; padding:10px;}
 .tborder {border:1px solid #999; border-collapse:collapse;}
 .tborderA {border:1px solid #999; border-collapse:collapse; width:auto;}
-.tdborder td {border:1px solid #999;}
+.tequip td {padding:0; margin:0; vertical-align:top;}
 .data {border-right:1px dotted #999; padding-right:2px;}
 .dotB {border-bottom:1px dotted #999; padding-bottom:2px;}
 .title {text-align:center; font-weight:bold; border-bottom:2px solid #000;}
@@ -35,6 +35,18 @@ p {color:#E00; font-weight:bold;}
 .manual input {border:1px solid #777; width:32px;}
 .mail {background:url(files/ce4.png) no-repeat; padding:0 58px;}
 #foot {line-height:185%; text-align:right;}
+
+#calcoptions {
+	background: linear-gradient(to bottom, #355 , #477);
+	border-bottom: 1px solid #999; border-right: 1px solid #999;
+	position:fixed; top:0; left:0;
+/*	display:block;*/
+	padding:5px;
+	/*width: 250px;*/
+	color:#FFF;
+}
+#calcoptions p {color:#FC8; text-align:center;}
+
 .p_overlay {
 	background:#000;
 	width:100%;

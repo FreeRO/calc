@@ -546,7 +546,7 @@ cardOBJ = [
 ,[542,7,"Gold Scaraba","",17,20,15,-1,0]
 ,[543,2,"Gold Queen Scaraba","[Refine Rate 9~20] Adds an additional 5% resistance to ["+SyuzokuOBJ[4]+"] race monsters.",4,3,54,10,0]
 ,[544,1,"Beholder Master (aRO)","<b>If compounded on a bow:</b><br>[Refine Rate 7~10] ASPD +1<br>[Refine Rate 9~10] Additional ASPD +1",25,3,0]
-,[545,2,"Duneyrr (aRO)","When dealing ATK based damage, 1% chance you gain ASPD +5% for 10 seconds.",17,10,0]
+,[545,2,"Duneyrr (old)","When dealing ATK based damage, 1% chance you gain ASPD +5% for 10 seconds.",17,10,0]
 ,[546,7,"Kafra Blossom","2% chance to increase resistance to ["+ZokuseiOBJ[3]+"], ["+ZokuseiOBJ[4]+"], ["+ZokuseiOBJ[1]+"], ["+ZokuseiOBJ[2]+"], ["+ZokuseiOBJ[6]+"], ["+ZokuseiOBJ[7]+"] elements by 10% for 10 seconds when receiving magic damage.",61,10,62,10,63,10,64,10,66,10,67,10,0]
 ,[547,1,"Pom Spider","",49,20,0]
 ,[548,1,"Little Fatum","When dealing MATK based damage, 5% chance to cause [Silence] status effect on your target.",0]
@@ -570,34 +570,78 @@ CardSortOBJ = [
 [0,230,412,188,416,142,411,365,350,370,270,147,395,417,324,414,262,490,256,489,542,335,410,418,354,495,389,151,419,216,492,493,226,152,546,103,97,218,101,371,144,378,104,149,250,130,248,247,105,150,415,143,251,148,212,494,386,316,541,297,260,488,315,146,487,96,314,491,312,336,98,292,236,145,413,237,99,385,102,100,"NULL"]
 ];
 
+function allCard(){
+	var c = document.calcForm;
+	c.A_head1_card.length = 0;
+	c.A_head2_card.length = 0;
+	c.A_left_card.length = 0;
+	c.A_body_card.length = 0;
+	c.A_shoulder_card.length = 0;
+	c.A_shoes_card.length = 0;
+	c.A_acces1_card.length = 0;
+	c.A_acces2_card.length = 0;
+	var card_restrict = eval(document.getElementById('all_card').checked);
+	var i=0;
+	if(!card_restrict){
+		for(i=0;CardSortOBJ[0][i]!="NULL";i++)
+			c.A_weapon1_card1.options[i] = new Option(cardOBJ[CardSortOBJ[0][i]][2],cardOBJ[CardSortOBJ[0][i]][0]);
+		for(i=0;CardSortOBJ[1][i]!="NULL";i++){
+			c.A_weapon1_card2.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
+			c.A_weapon1_card3.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
+			c.A_weapon1_card4.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
+		}
+		c.A_weapon1_card4.options[1] = new Option("TOP10 Ranked",106);
+		
+		for(i=0;CardSortOBJ[2][i]!="NULL";i++){
+			c.A_head1_card.options[i] = new Option(cardOBJ[CardSortOBJ[2][i]][2],cardOBJ[CardSortOBJ[2][i]][0]);
+			c.A_head2_card.options[i] = new Option(cardOBJ[CardSortOBJ[2][i]][2],cardOBJ[CardSortOBJ[2][i]][0]);
+		}
+		for(i=0;CardSortOBJ[3][i]!="NULL";i++)
+			c.A_left_card.options[i] = new Option(cardOBJ[CardSortOBJ[3][i]][2],cardOBJ[CardSortOBJ[3][i]][0]);
+		for(i=0;CardSortOBJ[4][i]!="NULL";i++)
+			c.A_body_card.options[i] = new Option(cardOBJ[CardSortOBJ[4][i]][2],cardOBJ[CardSortOBJ[4][i]][0]);
+		for(i=0;CardSortOBJ[5][i]!="NULL";i++)
+			c.A_shoulder_card.options[i] = new Option(cardOBJ[CardSortOBJ[5][i]][2],cardOBJ[CardSortOBJ[5][i]][0]);
+		for(i=0;CardSortOBJ[6][i]!="NULL";i++)
+			c.A_shoes_card.options[i] = new Option(cardOBJ[CardSortOBJ[6][i]][2],cardOBJ[CardSortOBJ[6][i]][0]);
+		for(i=0;CardSortOBJ[7][i]!="NULL";i++){
+			c.A_acces1_card.options[i] = new Option(cardOBJ[CardSortOBJ[7][i]][2],cardOBJ[CardSortOBJ[7][i]][0]);
+			c.A_acces2_card.options[i] = new Option(cardOBJ[CardSortOBJ[7][i]][2],cardOBJ[CardSortOBJ[7][i]][0]);
+		}
+	}else{
+		var n=0;
+		c.A_weapon1_card1.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_weapon1_card2.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_weapon1_card3.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_weapon1_card4.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_head1_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_head2_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_left_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_body_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_shoulder_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_shoes_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_acces1_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		c.A_acces2_card.options[0] = new Option(cardOBJ[0][2],cardOBJ[0][0]);
+		for(j=1;j<8;j++){
+			for(i=1;CardSortOBJ[j][i]!="NULL";i++){
+				n++;
+				c.A_weapon1_card1.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_weapon1_card2.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_weapon1_card3.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_weapon1_card4.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_head1_card.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_head2_card.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_left_card.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_body_card.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_shoulder_card.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_shoes_card.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_acces1_card.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+				c.A_acces2_card.options[n] = new Option(cardOBJ[CardSortOBJ[j][i]][2],cardOBJ[CardSortOBJ[j][i]][0]);
+			}
+		}
+	}
+}
 
-//if(Taijin!=99){
-	for(i=0;CardSortOBJ[0][i]!="NULL";i++)
-		document.calcForm.A_weapon1_card1.options[i] = new Option(cardOBJ[CardSortOBJ[0][i]][2],cardOBJ[CardSortOBJ[0][i]][0]);
-	for(i=0;CardSortOBJ[1][i]!="NULL";i++){
-		document.calcForm.A_weapon1_card2.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
-		document.calcForm.A_weapon1_card3.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
-		document.calcForm.A_weapon1_card4.options[i] = new Option(cardOBJ[CardSortOBJ[1][i]][2],cardOBJ[CardSortOBJ[1][i]][0]);
-	}
-	document.calcForm.A_weapon1_card4.options[1] = new Option("TOP10 Ranked",106);
-	
-	for(i=0;CardSortOBJ[2][i]!="NULL";i++){
-		document.calcForm.A_head1_card.options[i] = new Option(cardOBJ[CardSortOBJ[2][i]][2],cardOBJ[CardSortOBJ[2][i]][0]);
-		document.calcForm.A_head2_card.options[i] = new Option(cardOBJ[CardSortOBJ[2][i]][2],cardOBJ[CardSortOBJ[2][i]][0]);
-	}
-	for(i=0;CardSortOBJ[3][i]!="NULL";i++)
-		document.calcForm.A_left_card.options[i] = new Option(cardOBJ[CardSortOBJ[3][i]][2],cardOBJ[CardSortOBJ[3][i]][0]);
-	for(i=0;CardSortOBJ[4][i]!="NULL";i++)
-		document.calcForm.A_body_card.options[i] = new Option(cardOBJ[CardSortOBJ[4][i]][2],cardOBJ[CardSortOBJ[4][i]][0]);
-	for(i=0;CardSortOBJ[5][i]!="NULL";i++)
-		document.calcForm.A_shoulder_card.options[i] = new Option(cardOBJ[CardSortOBJ[5][i]][2],cardOBJ[CardSortOBJ[5][i]][0]);
-	for(i=0;CardSortOBJ[6][i]!="NULL";i++)
-		document.calcForm.A_shoes_card.options[i] = new Option(cardOBJ[CardSortOBJ[6][i]][2],cardOBJ[CardSortOBJ[6][i]][0]);
-	for(i=0;CardSortOBJ[7][i]!="NULL";i++){
-		document.calcForm.A_acces1_card.options[i] = new Option(cardOBJ[CardSortOBJ[7][i]][2],cardOBJ[CardSortOBJ[7][i]][0]);
-		document.calcForm.A_acces2_card.options[i] = new Option(cardOBJ[CardSortOBJ[7][i]][2],cardOBJ[CardSortOBJ[7][i]][0]);
-	}
-//}
 function Card(CBI)
 {
 //	n_itemSW=eval(document.calcForm.ITEM_SW.checked);

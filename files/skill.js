@@ -506,7 +506,7 @@
 [504,10,"Thunder Breath (ranged)"],
 [505,10,"Acid Breath (ranged)"],
 [506,10,"Holy Breath (ranged)"],
-[507,10,"Shadow Breath (ranged)"],
+[507,10,"Darkness Breath (ranged)"],
 [508,10,"Ghost Breath (ranged)"],
 [509,10,"Undead Breath (ranged)"]
 ];
