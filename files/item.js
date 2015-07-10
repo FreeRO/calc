@@ -1801,6 +1801,7 @@ ItemOBJ = [
 ,[1792,10,76,135,3,1,150,80,"Elven Bow (FreeRO)",0,"",25,-100,5,2,0]
 ,[1793,0,0,0,0,0,0,0,"Elven Set",0,"",25,100,0]
 ,[1794,51,0,1,0,0,40,70,"Stucked Bolts (FreeRO)",0,"",2,1,221,162,0]
+,[1795,51,0,2,0,0,10,70,"Blood Butterfly Ears (FreeRO)",0,"",9,2,15,1,37,2,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
