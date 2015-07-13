@@ -2073,6 +2073,10 @@ function Item_Setumei(nC1,nC2)
 		if(nC2 == 3) CBIstr += "<B>Mid and Low Headgear</B><BR>";
 		if(nC2 == 4) CBIstr += "<B>Upper, Mid, and Low Headgear</B><BR>";
 	}
+	if(209 == nC1)
+		CBIstr += "Movement Speed +"+nC2+"% (doesn't stack with Increase AGI)<BR>";
+	if(210 == nC1)
+		CBIstr += "Movement Speed +"+nC2+"% (stack with Increase AGI)<BR>";
 	if(212 <= nC1 && nC1 <= 215)
 		CBIstr += wNAME1[nC1 -210] + wIS + nC2 +"<BR>";
 	if(220 == nC1)

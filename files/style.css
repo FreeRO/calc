@@ -21,13 +21,14 @@ p {color:#E00; font-weight:bold;}
 .subheader select {margin:0; letter-spacing:0px; background-color:#FFF;}
 .subheader div {font-weight:100; letter-spacing:0px;}
 .subheader {padding:2px 6px 2px 6px; color:#FFF; line-height:1.7em; letter-spacing:1px; font-weight:bold; background-color:#466;}
+.thin select {height:16px;}
 .point {cursor:pointer;}
 .point:hover {text-decoration:underline;}
 .main {border:1px solid #999; background-color:#FFF; padding:10px;}
 .tborder {border:1px solid #999; border-collapse:collapse;}
 .tborderA {border:1px solid #999; border-collapse:collapse; width:auto;}
 .tequip td {padding:0; margin:0; vertical-align:top;}
-.data {border-right:1px dotted #999; padding-right:2px;}
+.data {border-right:1px dotted #999; padding-right:2px;font-weight:lighter;}
 .dotB {border-bottom:1px dotted #999; padding-bottom:2px;}
 .title {text-align:center; font-weight:bold; border-bottom:2px solid #000;}
 .center {text-align:center;}

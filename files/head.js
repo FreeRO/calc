@@ -2,6 +2,13 @@
     SRV = eval(document.getElementById("server").value), calc()
 }
 
+function restrictEquipslot() {
+    var c = document.calcForm;
+    equip_restrict = eval(document.getElementById("restrict_equipslot").checked);
+    var w = c.A_WeaponType.value;
+    (3 == w || 5 == w || 7 == w || 10 == w || 11 == w || 16 == w || 17 == w || 18 == w || 19 == w || 20 == w || 21 == w || n_Nitou) && equip_restrict ? (c.A_LEFT_DEF_PLUS.disabled = !0, c.A_LEFT_DEF_PLUS.value = 0, c.A_left.disabled = !0, c.A_left.value = 305, c.A_left_card.disabled = !0, c.A_left_card.value = 0) : (c.A_LEFT_DEF_PLUS.disabled = !1, c.A_left.disabled = !1, card_restrict && 0 != ItemOBJ[c.A_left.value][5] && (c.A_left_card.disabled = !1))
+}
+
 function restrictCardslot(select_ID) {
     var c = document.calcForm;
     card_restrict = eval(document.getElementById("restrict_cardslot").checked), card_restrict ? (0 != ItemOBJ[c.A_weapon1.value][5] ? (c.A_weapon1_card1.disabled = !1, c.A_weapon1_card2.disabled = !1, c.A_weapon1_card3.disabled = !1, c.A_weapon1_card4.disabled = !1) : (c.A_weapon1_card1.disabled = !0, c.A_weapon1_card1.value = 0, c.A_weapon1_card2.disabled = !0, c.A_weapon1_card2.value = 0, c.A_weapon1_card3.disabled = !0, c.A_weapon1_card3.value = 0, c.A_weapon1_card4.disabled = !0, c.A_weapon1_card4.value = 0), n_Nitou && (0 != ItemOBJ[c.A_weapon2.value][5] ? (c.A_weapon2_card1.disabled = !1, c.A_weapon2_card2.disabled = !1, c.A_weapon2_card3.disabled = !1, c.A_weapon2_card4.disabled = !1) : (c.A_weapon2_card1.disabled = !0, c.A_weapon2_card1.value = 0, c.A_weapon2_card2.disabled = !0, c.A_weapon2_card2.value = 0, c.A_weapon2_card3.disabled = !0, c.A_weapon2_card3.value = 0, c.A_weapon2_card4.disabled = !0, c.A_weapon2_card4.value = 0)), 0 != ItemOBJ[c.A_head1.value][5] ? c.A_head1_card.disabled = !1 : (c.A_head1_card.disabled = !0, c.A_head1_card.value = 0), 0 != ItemOBJ[c.A_head2.value][5] ? c.A_head2_card.disabled = !1 : (c.A_head2_card.disabled = !0, c.A_head2_card.value = 0), 0 != ItemOBJ[c.A_left.value][5] ? c.A_left_card.disabled = !1 : (c.A_left_card.disabled = !0, c.A_left_card.value = 0), 0 != ItemOBJ[c.A_body.value][5] ? c.A_body_card.disabled = !1 : (c.A_body_card.disabled = !0, c.A_body_card.value = 0), 0 != ItemOBJ[c.A_shoulder.value][5] ? c.A_shoulder_card.disabled = !1 : (c.A_shoulder_card.disabled = !0, c.A_shoulder_card.value = 0), 0 != ItemOBJ[c.A_shoes.value][5] ? c.A_shoes_card.disabled = !1 : (c.A_shoes_card.disabled = !0, c.A_shoes_card.value = 0), 0 != ItemOBJ[c.A_acces1.value][5] ? c.A_acces1_card.disabled = !1 : (c.A_acces1_card.disabled = !0, c.A_acces1_card.value = 0), 0 != ItemOBJ[c.A_acces2.value][5] ? c.A_acces2_card.disabled = !1 : (c.A_acces2_card.disabled = !0, c.A_acces2_card.value = 0)) : (c.A_weapon1_card1.disabled = !1, c.A_weapon1_card2.disabled = !1, c.A_weapon1_card3.disabled = !1, c.A_weapon1_card4.disabled = !1, n_Nitou && (c.A_weapon2_card1.disabled = !1, c.A_weapon2_card2.disabled = !1, c.A_weapon2_card3.disabled = !1, c.A_weapon2_card4.disabled = !1), c.A_head1_card.disabled = !1, c.A_head2.disabled ? c.A_head2_card.disabled = !0 : c.A_head2_card.disabled = !1, c.A_left.disabled ? c.A_left_card.disabled = !0 : c.A_left_card.disabled = !1, c.A_body_card.disabled = !1, c.A_shoulder_card.disabled = !1, c.A_shoes_card.disabled = !1, c.A_acces1_card.disabled = !1, c.A_acces2_card.disabled = !1), calc()
@@ -203,11 +210,11 @@ function BattleCalc999() {
         } else if (193 == n_A_ActiveSkill) {
             n_PerHIT_DMG = 0, w_HIT_HYOUJI = 100, n_A_Weapon_zokusei = 0, ATKbai02(wbairitu, 0), wbairitu += .75 * n_A_ActiveSkillLV, work_B_DEF2 = [0, 0, 0], work_B_DEF2[0] = n_B_DEF2[2], work_B_DEF2[1] = n_B_DEF2[1], work_B_DEF2[2] = n_B_DEF2[0];
             for (var b = 0; 2 >= b; b++) w_DMG[b] = Math.floor(Math.floor(BK_n_A_DMG[b] * wbairitu) * (work_B_DEF2[b] + n_B[14]) / 50), w_DMG[b] = BaiCI(w_DMG[b]), w_DMG[b] = Math.floor(w_DMG[b] * zokusei[n_B[3]][0]), SRV ? Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b] + EDP_DMG(b) + 3 * eval(document.calcForm.SkillSubNum.value) : Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b] + EDP_DMG(b), InnStr[b] += Last_DMG_A[b];
-            EDPplus(1), wCast = 1 * n_A_CAST, n_Delay[2] = .5, CastAndDelay(), BattleCalc998()
+            EDPplus(1), wCast = 1 * n_A_CAST, n_Delay[2] = .5,
+                CastAndDelay(), BattleCalc998()
         } else if (197 == n_A_ActiveSkill || 321 == n_A_ActiveSkill) {
             n_PerHIT_DMG = 0, w_HIT_HYOUJI = 100, n_A_Weapon_zokusei = 0, ATKbai02(wbairitu, 0), SRV ? 197 == n_A_ActiveSkill ? wbairitu += 8 + eval(document.calcForm.SkillSubNum.value) / 10 : wbairitu += 8 + (n_A_MaxSP - 1) / 10 : 197 == n_A_ActiveSkill ? wbairitu += 7 + eval(document.calcForm.SkillSubNum.value) / 10 : wbairitu += 7 + (n_A_MaxSP - 1) / 10, wASYU = 250 + 150 * n_A_ActiveSkillLV;
-            for (var b = 0; 2 >= b; b++) w_DMG[b] = Math.floor(BK_n_A_DMG[b] * wbairitu) + wASYU, w_DMG[b] = BaiCI(w_DMG[b]), w_DMG[b] = Math.floor(w_DMG[b] * zokusei[n_B[3]][0]),
-                SRV && (n_A_Buf6[5] && (w_DMG[b] += Math.floor((.02 + .03 * n_A_Buf6[5]) * w_DMG[b])), n_A_Buf6[5] && n_A_Buf7[31] ? w_DMG[b] += 0 : n_A_Buf7[31] && (w_DMG[b] += Math.floor(.05 * w_DMG[b])), 1 == n_A_Buf2[19] && (w_DMG[b] = 2 * w_DMG[b])), Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b] + EDP_DMG(b), InnStr[b] += Last_DMG_A[b];
+            for (var b = 0; 2 >= b; b++) w_DMG[b] = Math.floor(BK_n_A_DMG[b] * wbairitu) + wASYU, w_DMG[b] = BaiCI(w_DMG[b]), w_DMG[b] = Math.floor(w_DMG[b] * zokusei[n_B[3]][0]), SRV && (n_A_Buf6[5] && (w_DMG[b] += Math.floor((.02 + .03 * n_A_Buf6[5]) * w_DMG[b])), n_A_Buf6[5] && n_A_Buf7[31] ? w_DMG[b] += 0 : n_A_Buf7[31] && (w_DMG[b] += Math.floor(.05 * w_DMG[b])), 1 == n_A_Buf2[19] && (w_DMG[b] = 2 * w_DMG[b])), Last_DMG_A[b] = Last_DMG_B[b] = w_DMG[b] + EDP_DMG(b), InnStr[b] += Last_DMG_A[b];
             EDPplus(1), wCast = (4.5 - .5 * n_A_ActiveSkillLV) * n_A_CAST, n_Delay[2] = 3.5 - .5 * n_A_ActiveSkillLV, CastAndDelay(), BattleCalc998()
         } else if (394 == n_A_ActiveSkill) {
             n_Enekyori = 1, not_use_card = 1, ATKbai02(wbairitu, 0);
@@ -522,14 +529,14 @@ function BattleHiDam() {
             w = n_tok[71] * asm;
         wRef2[0] = Math.floor(wBHD * w / 100), 0 == wRef2[0] && (wRef2[0] = 1), wRef2[1] = Math.floor(w_HiDam[0] * w / 100), 0 == wRef2[1] && (wRef2[1] = 1), wRef2[2] = Math.floor(w_HiDam[6] * w / 100), 0 == wRef2[2] && (wRef2[2] = 1), wRefStr1 += "<BR><B style='color:blue'>" + wRef2[1] + "</B>", wRefStr0 += "<BR><B style='color:blue'>" + wRef2[0] + "</B>", wRefStr2 += "<BR><B style='color:blue'>" + wRef2[2] + "</B>", name67 += "<BR><B style='color:blue'>Min Dmg Reflected (Equip/Cards)</B>", name65 += "<BR><B style='color:blue'>Avg Dmg Reflected (Equip/Cards)</B>", name68 += "<BR><B style='color:blue'>Max Dmg Reflected (Equip/Cards)</B>"
     }
-    return myInnerHtml("nm067", name67, 0), myInnerHtml("nm065", name65, 0), myInnerHtml("nm068", name68, 0), BskillHitNum > 1 ? (myInnerHtml("B_MinAtk", w_HiDam[0] * BskillHitNum + " (" + w_HiDam[0] + " x " + BskillHitNum + ")" + wRefStr1, 0), myInnerHtml("B_AveAtk", wBHD * BskillHitNum + " (" + wBHD + " x " + BskillHitNum + ")" + wRefStr0, 0), myInnerHtml("B_MaxAtk", w_HiDam[6] * BskillHitNum + " (" + w_HiDam[6] + " x " + BskillHitNum + ")" + wRefStr2, 0)) : (myInnerHtml("B_MinAtk", w_HiDam[0] + wRefStr1, 0), myInnerHtml("B_AveAtk", wBHD + wRefStr0, 0), myInnerHtml("B_MaxAtk", w_HiDam[6] + wRefStr2, 0)), wBHD
+    return myInnerHtml("nm067", name67, 0), myInnerHtml("nm065", name65, 0), myInnerHtml("nm068", name68, 0), BskillHitNum > 1 ? (myInnerHtml("B_MinAtk", w_HiDam[0] * BskillHitNum + " (" + w_HiDam[0] + " x " + BskillHitNum + ")" + wRefStr1, 0), myInnerHtml("B_AveAtk", wBHD * BskillHitNum + " (" + wBHD + " x " + BskillHitNum + ")" + wRefStr0, 0),
+        myInnerHtml("B_MaxAtk", w_HiDam[6] * BskillHitNum + " (" + w_HiDam[6] + " x " + BskillHitNum + ")" + wRefStr2, 0)) : (myInnerHtml("B_MinAtk", w_HiDam[0] + wRefStr1, 0), myInnerHtml("B_AveAtk", wBHD + wRefStr0, 0), myInnerHtml("B_MaxAtk", w_HiDam[6] + wRefStr2, 0)), wBHD
 }
 
 function BattleMagicCalc(_) {
     wBMC_MDEF = n_B[15];
     var n = 0;
-    0 == n_B[19] && CardNumSearch(424) && (n = 1), 0 != n && (wBMC_MDEF = 0, n_B_MDEF2 = 0), 122 == n_A_ActiveSkill ? wBMC2 = Math.floor(_ + 50) : wBMC2 = Math.floor(_ * (100 - wBMC_MDEF) / 100 - n_B_MDEF2), wBMC2 < 1 && (wBMC2 = 1), 104 == n_A_ActiveSkill && 6 != n_B[2] && n_B[3] < 90 && (wBMC2 = 0),
-        wBMC2 = Math.floor(wBMC2 * zokusei[n_B[3]][n_A_Weapon_zokusei]), SRV ? n_B[3] > 89 && n_B[3] < 95 && 47 == n_A_ActiveSkill && (wBMC2 = Math.floor(wBMC2 * (1 + .05 * n_A_ActiveSkillLV))) : 90 <= n_B[3] && 47 == n_A_ActiveSkill && (wBMC2 = Math.floor(wBMC2 * (1 + .05 * n_A_ActiveSkillLV)));
+    0 == n_B[19] && CardNumSearch(424) && (n = 1), 0 != n && (wBMC_MDEF = 0, n_B_MDEF2 = 0), 122 == n_A_ActiveSkill ? wBMC2 = Math.floor(_ + 50) : wBMC2 = Math.floor(_ * (100 - wBMC_MDEF) / 100 - n_B_MDEF2), wBMC2 < 1 && (wBMC2 = 1), 104 == n_A_ActiveSkill && 6 != n_B[2] && n_B[3] < 90 && (wBMC2 = 0), wBMC2 = Math.floor(wBMC2 * zokusei[n_B[3]][n_A_Weapon_zokusei]), SRV ? n_B[3] > 89 && n_B[3] < 95 && 47 == n_A_ActiveSkill && (wBMC2 = Math.floor(wBMC2 * (1 + .05 * n_A_ActiveSkillLV))) : 90 <= n_B[3] && 47 == n_A_ActiveSkill && (wBMC2 = Math.floor(wBMC2 * (1 + .05 * n_A_ActiveSkillLV)));
     var e = n_tok[170 + n_B[2]];
     9 == n_B[2] && SkillSearch(234) && (e += 2 * SkillSearch(234)), wBMC2 = wBMC2 * (100 + e) / 100, wBMC2 = tPlusDamCut(wBMC2);
     var e = StPlusCalc2(5e3 + n_A_ActiveSkill) + StPlusCard(5e3 + n_A_ActiveSkill);
@@ -538,11 +545,7 @@ function BattleMagicCalc(_) {
 
 function ClickJob(n) {
     with(document.calcForm) {
-        if (myInnerHtml("A_KakutyouSel", "", 0), myInnerHtml("A_KakutyouData", "", 0), A_Kakutyou.value = 0, equip_restrict = eval(document.getElementById("restrict_equipslot").checked), n_A_JobSet(), (8 == n_A_JOB || 22 == n_A_JOB) && 11 != n && n_Nitou) {
-            var weap2 = A_Weapon2Type.value;
-            weap2 && equip_restrict ? (A_LEFT_DEF_PLUS.disabled = !0, A_LEFT_DEF_PLUS.value = 0, A_left.disabled = !0, A_left.value = 305, A_left_card.disabled = !0, A_left_card.value = 0) : (A_LEFT_DEF_PLUS.disabled = !1, A_left.disabled = !1, A_left_card.disabled = !1)
-        }
-        n_A_JobSet(), n = n_A_JOB;
+        myInnerHtml("A_KakutyouSel", "", 0), myInnerHtml("A_KakutyouData", "", 0), A_Kakutyou.value = 0, n_A_JobSet(), n = n_A_JOB;
         var len = A_JobLV.length;
         for (i = 0; len > i; i++) A_JobLV.options[0] = null;
         var w = 0;
@@ -602,32 +605,24 @@ function Bskill() {
 
 function ClickWeaponType(n) {
     with(document.calcForm) {
-        if (n_A_JobSet(), 2 == n_A_JobClass() || 4 == n_A_JobClass() || 45 == n_A_JOB && 0 != n) {
-            A_Arrow.disabled = !1;
-            for (var len = A_Arrow.length, i = 0; len > i; i++) A_Arrow.options[0] = null;
-            if (10 == n || 14 == n || 15 == n)
-                for (j = 18, i = 0; 4 >= i; i++) ArrowOBJ[i] = ArrowOBJbackup[i];
-            else if (17 == n || 18 == n || 19 == n || 20 == n)
-                for (j = 2, i = 0; 2 >= i; i++) ArrowOBJ[i] = BulletOBJ[i];
-            else if (21 == n)
-                for (j = 4, i = 0; 4 >= i; i++) ArrowOBJ[i] = GrenadeOBJ[i];
-            else j = 1, ArrowOBJ[0] = [0, 0, "No Arrows"], ArrowOBJ[1] = ArrowOBJ[16];
-            for (i = 0; i <= j; i++) A_Arrow.options[i] = new Option(ArrowOBJ[i][2], i)
-        } else A_Arrow.value = 0, A_Arrow.disabled = !0;
-        if (equip_restrict = eval(document.getElementById("restrict_equipslot").checked), WeaponSet(), 0 == n) {
-            if (A_Weapon_ATKplus.disabled = !0, A_Weapon_ATKplus.value = 0, n_Nitou) {
-                var weap2 = A_Weapon2Type.value;
-                weap2 && equip_restrict ? (A_LEFT_DEF_PLUS.disabled = !0, A_LEFT_DEF_PLUS.value = 0, A_left.disabled = !0, A_left.value = 305, A_left_card.disabled = !0, A_left_card.value = 0) : (A_LEFT_DEF_PLUS.disabled = !1, A_left.disabled = !1, card_restrict && 0 != ItemOBJ[A_left.value][5] && (A_left_card.disabled = !1))
-            }
-        } else A_Weapon_ATKplus.disabled = !1, (3 == n || 5 == n || 7 == n || 10 == n || 11 == n || 16 == n || 17 == n || 18 == n || 19 == n || 20 == n || 21 == n || n_Nitou) && equip_restrict ? (A_LEFT_DEF_PLUS.disabled = !0, A_LEFT_DEF_PLUS.value = 0, A_left.disabled = !0, A_left.value = 305, A_left_card.disabled = !0, A_left_card.value = 0) : (A_LEFT_DEF_PLUS.disabled = !1, A_left.disabled = !1, A_left_card.disabled = !1);
-        n_A_JobSet(), 8 != n_A_JOB && 22 != n_A_JOB || 11 == n ? (myInnerHtml("A_SobWeaponName", "", 0), myInnerHtml("spanA_weapon2", "", 0), myInnerHtml("spanA_weapon2seiren", "", 0), myInnerHtml("spanA_weapon2_CardShort", "", 0), myInnerHtml("nA_weapon2_c1", "", 0), myInnerHtml("nA_weapon2_c2", "", 0), myInnerHtml("nA_weapon2_c3", "", 0), myInnerHtml("nA_weapon2_c4", "", 0), n_Nitou = 0, (3 == n || 5 == n || 7 == n || 10 == n || 11 == n || 16 == n || 17 == n || 18 == n || 19 == n || 20 == n || 21 == n || n_Nitou) && equip_restrict ? (A_LEFT_DEF_PLUS.disabled = !0, A_LEFT_DEF_PLUS.value = 0, A_left.disabled = !0, A_left.value = 305, A_left_card.disabled = !0, A_left_card.value = 0) : (A_LEFT_DEF_PLUS.disabled = !1, A_left.disabled = !1, A_left_card.disabled = !1)) : 0 == n_Nitou && myInnerHtml("A_SobWeaponName", 'Left Hand: <select name="A_Weapon2Type" onChange = "ClickWeaponType2(this[this.selectedIndex].value) | StAllCalc() | restrictCardslot(1)">	<option value="0">Fist or Shield<option value="1">Dagger<option value="2">Sword<option value="6">Axe</select>', 0), n_A_Equip[0] = eval(A_weapon1.value), ActiveSkillSetPlus(), ClickB_Item(n_A_Equip[0])
+        n_A_JobSet(), A_Arrow.disabled = !1;
+        for (var i = 0; 23 > i; i++) A_Arrow.options[0] = null;
+        if (10 == n || 14 == n || 15 == n)
+            for (j = 23, i = 0; 4 >= i; i++) ArrowOBJ[i] = ArrowOBJbackup[i];
+        else if (17 == n || 18 == n || 19 == n || 20 == n)
+            for (j = 2, i = 0; 2 >= i; i++) ArrowOBJ[i] = BulletOBJ[i];
+        else if (21 == n)
+            for (j = 4, i = 0; 4 >= i; i++) ArrowOBJ[i] = GrenadeOBJ[i];
+        else j = 1, ArrowOBJ[0] = [0, 0, "(No Arrow)"], A_Arrow.value = 0, A_Arrow.disabled = !0;
+        for (i = 0; i <= j; i++) A_Arrow.options[i] = new Option(ArrowOBJ[i][2], i);
+        WeaponSet(), 0 == n ? (A_Weapon_ATKplus.disabled = !0, A_Weapon_ATKplus.value = 0) : A_Weapon_ATKplus.disabled = !1, n_A_JobSet(), 8 != n_A_JOB && 22 != n_A_JOB || 11 == n ? (myInnerHtml("A_SobWeaponName", "", 0), myInnerHtml("spanA_weapon2", "", 0), myInnerHtml("spanA_weapon2seiren", "", 0), myInnerHtml("spanA_weapon2_CardShort", "", 0), myInnerHtml("nA_weapon2_c1", "", 0), myInnerHtml("nA_weapon2_c2", "", 0), myInnerHtml("nA_weapon2_c3", "", 0), myInnerHtml("nA_weapon2_c4", "", 0), n_Nitou = 0) : 0 == n_Nitou && myInnerHtml("A_SobWeaponName", 'Left Hand: <select name="A_Weapon2Type" onChange = "ClickWeaponType2(this[this.selectedIndex].value) | StAllCalc() | restrictCardslot(1)">	<option value="0">Fist or Shield<option value="1">Dagger<option value="2">Sword<option value="6">Axe</select>', 0), n_A_Equip[0] = eval(A_weapon1.value), ActiveSkillSetPlus(), ClickB_Item(n_A_Equip[0])
     }
 }
 
 function ClickWeaponType2(n) {
     with(document.calcForm) {
-        if (equip_restrict = eval(document.getElementById("restrict_equipslot").checked), n_A_JobSet(), 0 != n) {
-            if (equip_restrict ? (A_LEFT_DEF_PLUS.disabled = !0, A_LEFT_DEF_PLUS.value = 0, A_left.disabled = !0, A_left.value = 305, A_left_card.disabled = !0, A_left_card.value = 0) : (A_LEFT_DEF_PLUS.disabled = !1, A_left.disabled = !1, A_left_card.disabled = !1), 0 == n_Nitou) {
+        if (n_A_JobSet(), 0 != n) {
+            if (0 == n_Nitou) {
                 for (myInnerHtml("spanA_weapon2", '<select name="A_weapon2" onChange="StAllCalc()|ClickB_Item(this[this.selectedIndex].value) | restrictCardslot(1)"></select>', 0), myInnerHtml("spanA_weapon2seiren", 'Refine (Left): <select name="A_Weapon2_ATKplus" onChange = "StAllCalc()"></select>', 0), i = 0; 10 >= i; i++) A_Weapon2_ATKplus.options[i] = new Option("+" + i, i);
                 for (myInnerHtml("nA_weapon2_c1", '<select name="A_weapon2_card1" onChange="StAllCalc()|Card(this[this.selectedIndex].value)"></select>', 0), myInnerHtml("nA_weapon2_c2", '<select name="A_weapon2_card2" onChange="StAllCalc()|Card(this[this.selectedIndex].value)"></select>', 0), myInnerHtml("nA_weapon2_c3", '<select name="A_weapon2_card3" onChange="StAllCalc()|Card(this[this.selectedIndex].value)"></select>', 0), myInnerHtml("nA_weapon2_c4", '<select name="A_weapon2_card4" onChange="StAllCalc()|Card(this[this.selectedIndex].value)"></select>', 0), i = 0;
                     "NULL" != CardSortOBJ[0][i]; i++) A_weapon2_card1.options[i] = new Option(cardOBJ[CardSortOBJ[0][i]][2], cardOBJ[CardSortOBJ[0][i]][0]);
@@ -637,7 +632,7 @@ function ClickWeaponType2(n) {
             }
             for (myInnerHtml("spanA_weapon2_CardShort", '<select name="A_cardshortLeft" onChange="SetCardShortLeft()|StAllCalc()|ActiveSkillSetPlus()"></select>', 0), A_cardshortLeft.options[0] = new Option("Card Shortcuts", 0), i = 1; 60 >= i; i++) A_cardshortLeft.options[i] = new Option(CardShort[i][0], i);
             n_Nitou = 1, WeaponSetLeft()
-        } else myInnerHtml("spanA_weapon2", "", 0), myInnerHtml("spanA_weapon2seiren", "", 0), myInnerHtml("spanA_weapon2_CardShort", "", 0), myInnerHtml("nA_weapon2_c1", "", 0), myInnerHtml("nA_weapon2_c2", "", 0), myInnerHtml("nA_weapon2_c3", "", 0), myInnerHtml("nA_weapon2_c4", "", 0), n_Nitou = 0, A_LEFT_DEF_PLUS.disabled = !1, A_left.disabled = !1, A_left_card.disabled = !1;
+        } else myInnerHtml("spanA_weapon2", "", 0), myInnerHtml("spanA_weapon2seiren", "", 0), myInnerHtml("spanA_weapon2_CardShort", "", 0), myInnerHtml("nA_weapon2_c1", "", 0), myInnerHtml("nA_weapon2_c2", "", 0), myInnerHtml("nA_weapon2_c3", "", 0), myInnerHtml("nA_weapon2_c4", "", 0), n_Nitou = 0;
         n_Nitou && (n_A_Equip[1] = eval(A_weapon2.value), ActiveSkillSetPlus(), ClickB_Item(n_A_Equip[1]))
     }
 }
@@ -774,10 +769,10 @@ function Buf3SW(v) {
         if (n_Skill3SW = v, n_Skill3SW) {
             var str;
             for (str = '<table class="tborder">', str += '<TR><TD id="A3TD" ColSpan="6" class="subheader point" onclick="Buf3SW(0)">Music and Dance Skills <span id="A3used"></span>', str += '<div class="right">(click to show/hide)</div></TD></TR>', str += '<TR><TD id="EN0_1"></TD><TD id="EN0_2" class="data"></TD><TD id="EN0_3"></TD><TD id="EN0_4" class="data"></TD><TD id="EN0_5"></TD><TD id="EN0_6"></TD></TR>', str += '<TR><TD id="EN1_1"></TD><TD id="EN1_2" class="data"></TD><TD id="EN1_3"></TD><TD id="EN1_4" class="data"></TD><TD id="EN1_5"></TD><TD id="EN1_6"></TD></TR>', str += '<TR><TD id="EN2_1"></TD><TD id="EN2_2" class="data"></TD><TD id="EN2_3" style="line-height:165%;"></TD><TD id="EN2_4" class="data"></TD><TD id="EN2_5"></TD><TD id="EN2_6"></TD></TR>', str += '<TR><TD id="EN3_1"></TD><TD id="EN3_2" class="data"></TD><TD id="EN3_3"></TD><TD id="EN3_4" class="data"></TD><TD id="EN3_5"></TD><TD id="EN3_6"></TD></TR>', str += '<TR><TD id="EN4_1"></TD><TD id="EN4_2" class="data"></TD><TD id="EN4_3"></TD><TD id="EN4_4" class="data"></TD><TD id="EN4_5"></TD><TD id="EN4_6"></TD></TR>', str += '<TR><TD id="EN5_1"></TD><TD id="EN5_2" class="data"></TD><TD id="EN5_3"></TD><TD id="EN5_4" class="data"></TD><TD id="EN5_5"></TD><TD id="EN5_6"></TD></TR>', str += '<TR class="dotB"><TD id="EN6_1"></TD><TD id="EN6_2" class="data"></TD><TD id="EN6_3"></TD><TD id="EN6_4" class="data"></TD><TD id="EN6_5"></TD><TD id="EN6_6"></TD></TR>', str += '<TR><TD id="EN7_1"></TD><TD id="EN7_2" class="data"></TD><TD id="EN8_1" ColSpan="2"></TD><TD id="EN8_2"></TD><TD></TD></TR>', str += '<TR class="dotB"><TD id="EN9_1"></TD><TD id="EN9_2" class="data"></TD><TD id="EN10_1" ColSpan="2"></TD><TD id="EN10_2"></TD><TD></TD></TR>', str += '<TR><TD colspan=6><span id="EN11_1"></span><span id="EN11_2"></span><span id="EN11_1a"></span></TD></TR></TABLE>', myInnerHtml("SP_SIEN01", str, 0), SRV ? name_CS3SW_SKILL = ["A Whistle", "Assassin Cross of Sunset", "Poem of Bragi", "The Apple of Idun", "Humming", "Fortune's Kiss", "Service for You", "Invulnerable Siegfried", "Mr. Kim A Rich Man", "A Drum on the Battlefield", "The Ring of Nibelungen"] : name_CS3SW_SKILL = ["Perfect Tabulature", "Impressive Rift", "Magic Strings", "Song of Lutie", "Focus Ballet", "Lady Luck", "Gypsie's Kiss", "Acoustic Rhythm", "Mental Sensing", "Battle Theme", "Harmonic Lick"], i = 0; 10 >= i; i++) myInnerHtml("EN" + i + "_1", name_CS3SW_SKILL[i], 0);
-            for (myInnerHtml("EN0_2", '<select name="A3_Skill0_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN1_2", '<select name="A3_Skill1_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN2_2", '<select name="A3_Skill2_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN3_2", '<select name="A3_Skill3_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN4_2", '<select name="A3_Skill4_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN5_2", '<select name="A3_Skill5_1" onChange="Skill3SW_2()|A3(1)"></select>', 0),
-                myInnerHtml("EN6_2", '<select name="A3_Skill6_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN7_2", '<select name="A3_Skill7" onChange="A3(1)"></select>', 0), myInnerHtml("EN8_2", '<select name="A3_Skill8" onChange="A3(1)"></select>', 0), myInnerHtml("EN9_2", '<select name="A3_Skill9" onChange="A3(1)"></select>', 0), myInnerHtml("EN10_2", '<select name="A3_Skill10" onChange="A3(1)"></select>', 0), myInnerHtml("EN11_1", '<input type="checkbox" name="A3_Skill11" onClick="Skill3SW_2()|calc()">Marionette Control', 0), i = 0; 10 >= i; i++) A3_Skill0_1.options[i] = new Option(i, i), A3_Skill1_1.options[i] = new Option(i, i), A3_Skill2_1.options[i] = new Option(i, i), A3_Skill3_1.options[i] = new Option(i, i), A3_Skill4_1.options[i] = new Option(i, i), A3_Skill5_1.options[i] = new Option(i, i), A3_Skill6_1.options[i] = new Option(i, i);
+            for (myInnerHtml("EN0_2", '<select name="A3_Skill0_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN1_2", '<select name="A3_Skill1_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN2_2", '<select name="A3_Skill2_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN3_2", '<select name="A3_Skill3_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN4_2", '<select name="A3_Skill4_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN5_2", '<select name="A3_Skill5_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN6_2", '<select name="A3_Skill6_1" onChange="Skill3SW_2()|A3(1)"></select>', 0), myInnerHtml("EN7_2", '<select name="A3_Skill7" onChange="A3(1)"></select>', 0), myInnerHtml("EN8_2", '<select name="A3_Skill8" onChange="A3(1)"></select>', 0), myInnerHtml("EN9_2", '<select name="A3_Skill9" onChange="A3(1)"></select>', 0), myInnerHtml("EN10_2", '<select name="A3_Skill10" onChange="A3(1)"></select>', 0), myInnerHtml("EN11_1", '<input type="checkbox" name="A3_Skill11" onClick="Skill3SW_2()|calc()">Marionette Control', 0), i = 0; 10 >= i; i++) A3_Skill0_1.options[i] = new Option(i, i), A3_Skill1_1.options[i] = new Option(i, i), A3_Skill2_1.options[i] = new Option(i, i), A3_Skill3_1.options[i] = new Option(i, i), A3_Skill4_1.options[i] = new Option(i, i), A3_Skill5_1.options[i] = new Option(i, i), A3_Skill6_1.options[i] = new Option(i, i);
             for (i = 0; 5 >= i; i++) A3_Skill7.options[i] = new Option(i, i), A3_Skill8.options[i] = new Option(i, i), A3_Skill9.options[i] = new Option(i, i), A3_Skill10.options[i] = new Option(i, i);
-            A3_Skill0_1.value = n_A_Buf3[0], A3_Skill1_1.value = n_A_Buf3[1], A3_Skill2_1.value = n_A_Buf3[2], A3_Skill3_1.value = n_A_Buf3[3], A3_Skill4_1.value = n_A_Buf3[4], A3_Skill5_1.value = n_A_Buf3[5], A3_Skill6_1.value = n_A_Buf3[6], A3_Skill7.value = n_A_Buf3[7], A3_Skill8.value = n_A_Buf3[8], A3_Skill9.value = n_A_Buf3[9], A3_Skill10.value = n_A_Buf3[10], A3_Skill11.checked = n_A_Buf3[11], Skill3SW_2()
+            A3_Skill0_1.value = n_A_Buf3[0], A3_Skill1_1.value = n_A_Buf3[1], A3_Skill2_1.value = n_A_Buf3[2], A3_Skill3_1.value = n_A_Buf3[3], A3_Skill4_1.value = n_A_Buf3[4], A3_Skill5_1.value = n_A_Buf3[5], A3_Skill6_1.value = n_A_Buf3[6], A3_Skill7.value = n_A_Buf3[7], A3_Skill8.value = n_A_Buf3[8], A3_Skill9.value = n_A_Buf3[9], A3_Skill10.value = n_A_Buf3[10], A3_Skill11.checked = n_A_Buf3[11],
+                Skill3SW_2()
         } else {
             var str;
             for (str = '<table class="tborder">', str += '<TR><TD id="A3TD" class="subheader point" onclick="Buf3SW(1)">Music and Dance Skills <span id="A3used"></span>', str += '<div class="right">(click to show/hide)</div></TD></TR></TABLE>', myInnerHtml("SP_SIEN01", str, 0), i = 0; 11 >= i; i++) SWs3sw[i] = 0
@@ -1103,8 +1098,7 @@ function ClickB_Enemy() {
             var w, w2;
             Taijin ? (w2 = 5 * n_B_IJYOU[1], w = Math.floor(n_B[8] / 4)) : (w2 = 10 * n_B_IJYOU[1], w = Math.floor(n_B[8] / 2)), w > w2 ? n_B[8] -= w2 : n_B[8] -= w
         }
-        if (0 == n_B[19] && n_B_IJYOU[11] && (n_B[8] -= n_B_IJYOU[11] + 2, n_B[8] < 0 && (n_B[8] = 0)),
-            n_B_IJYOU[1]) {
+        if (0 == n_B[19] && n_B_IJYOU[11] && (n_B[8] -= n_B_IJYOU[11] + 2, n_B[8] < 0 && (n_B[8] = 0)), n_B_IJYOU[1]) {
             var w, w2;
             Taijin ? (w2 = 5 * n_B_IJYOU[1], w = Math.floor(n_B[10] / 4)) : (w2 = 10 * n_B_IJYOU[1], w = Math.floor(n_B[10] / 2)), w > w2 ? n_B[10] -= w2 : n_B[10] -= w
         }
@@ -1297,108 +1291,112 @@ var SRV = 10,
     equip_restrict = 1,
     card_restrict = 0;
 WeaponName = ["(Unarmed)", "Dagger", "Sword", "Two-handed Sword", "Spear", "Two-handed Spear", "Axe", "Two-handed Axe", "Mace", "Rod / Staff", "Bow", "Katar", "Book", "Knuckle", "Instrument", "Whip", "Huuma Shuriken", "Handgun", "Rifle", "Shotgun", "Gatling Gun", "Grenade Launcher"], ArrowOBJ = [
-        [25, 0, "Arrow"],
-        [30, 6, "Silver Arrow"],
-        [30, 3, "Fire Arrow"],
-        [30, 0, "Iron Arrow"],
-        [30, 2, "Stone Arrow"],
-        [30, 1, "Crystal Arrow"],
-        [30, 4, "Arrow of Wind"],
-        [30, 7, "Arrow of Shadow"],
-        [30, 8, "Immaterial Arrow"],
-        [30, 5, "Rusty Arrow"],
-        [40, 0, "Steel Arrow"],
-        [50, 0, "Oridecon Arrow"],
-        [50, 6, "Arrow of Counter Evil"],
-        [1, 1, "Frozen Arrow"],
-        [1, 5, "Poison Arrow"],
-        [10, 0, "Sharp Arrow"],
-        [50, 6, "Holy Arrow"],
-        [35, 0, "Hunting Arrow"],
-        [45, 0, "Elven Arrow"],
-        [1, 0, "(1 ATK neutral arrow)"]
-    ], ArrowOBJbackup = [
-        [25, 0, "Arrow"],
-        [30, 6, "Silver Arrow"],
-        [30, 3, "Fire Arrow"],
-        [30, 0, "Iron Arrow"],
-        [30, 2, "Stone Arrow"]
-    ], BulletOBJ = [
-        [10, 0, "Bullet"],
-        [15, 6, "Silver Bullet"],
-        [30, 0, "Blood Bullet"]
-    ], GrenadeOBJ = [
-        [50, 3, "Flare Sphere"],
-        [50, 1, "Freezing Sphere"],
-        [50, 4, "Lightning Sphere"],
-        [50, 7, "Blind Sphere"],
-        [50, 5, "Poison Sphere"]
-    ], SyurikenOBJ = [
-        [10, 0, "Shuriken"],
-        [30, 0, "Numbus Shuriken"],
-        [45, 0, "Flash Shuriken"],
-        [70, 0, "Sharp Leaf Shuriken"],
-        [100, 0, "Thorn Needle Shuriken"]
-    ], KunaiOBJ = [
-        [30, 3, "Heat Wave Kunai"],
-        [30, 1, "Icicle Kunai"],
-        [30, 4, "High Wind Kunai"],
-        [30, 2, "Black Earth Kunai"],
-        [30, 5, "Fell Poison Kunai"]
-    ], JobEquipItemOBJ = [
-        [0, 50, 90, 100, 999],
-        [0, 1, 51, 101, 70, 71, 72, 74, 75, 78, 83, 84, 85, 86, 87, 90, 91, 999],
-        [0, 1, 52, 102, 72, 74, 75, 78, 80, 83, 84, 85, 90, 91, 999],
-        [0, 1, 53, 103, 71, 73, 74, 77, 78, 85, 89, 57, 999],
-        [0, 1, 54, 104, 75, 76, 83, 89, 999],
-        [0, 1, 55, 105, 71, 77, 89, 57, 999],
-        [0, 1, 56, 106, 70, 71, 72, 73, 74, 75, 78, 83, 84, 85, 86, 90, 91, 999],
-        [0, 1, 51, 61, 107, 70, 71, 72, 74, 75, 78, 79, 83, 84, 85, 86, 87, 90, 91, 999],
-        [0, 1, 52, 62, 108, 72, 74, 75, 78, 79, 81, 83, 84, 85, 90, 91, 999],
-        [0, 1, 53, 63, 109, 71, 73, 74, 77, 78, 79, 81, 85, 89, 57, 999],
-        [0, 1, 54, 64, 110, 75, 76, 79, 80, 83, 88, 89, 999],
-        [0, 1, 55, 65, 111, 71, 77, 79, 89, 57, 999],
-        [0, 1, 56, 66, 112, 70, 71, 72, 73, 74, 75, 78, 79, 83, 84, 85, 86, 90, 91, 999],
-        [0, 1, 51, 61, 113, 70, 71, 72, 74, 75, 78, 79, 83, 84, 85, 86, 87, 90, 91, 999],
-        [0, 1, 52, 62, 114, 72, 74, 75, 76, 78, 79, 80, 83, 84, 85, 88, 91, 999],
-        [0, 1, 53, 63, 115, 71, 73, 74, 77, 78, 79, 85, 89, 57, 999],
-        [0, 1, 54, 64, 116, 74, 75, 76, 79, 83, 89, 999],
-        [0, 1, 54, 64, 117, 74, 75, 76, 79, 83, 89, 999],
-        [0, 1, 55, 65, 118, 71, 77, 79, 89, 57, 999],
-        [0, 1, 56, 66, 119, 70, 71, 72, 73, 74, 75, 78, 79, 83, 84, 85, 86, 90, 91, 999],
-        [0, 50, 90, 120, 999],
-        [0, 1, 51, 61, 107, 121, 70, 71, 72, 74, 75, 78, 79, 82, 83, 84, 85, 86, 87, 90, 91, 999],
-        [0, 1, 52, 62, 108, 122, 72, 74, 75, 78, 79, 81, 82, 83, 84, 85, 90, 91, 999],
-        [0, 1, 53, 63, 109, 123, 71, 73, 74, 77, 78, 79, 81, 82, 85, 89, 57, 999],
-        [0, 1, 54, 64, 110, 124, 75, 76, 79, 80, 82, 83, 88, 89, 999],
-        [0, 1, 55, 65, 111, 125, 71, 77, 79, 82, 89, 57, 999],
-        [0, 1, 56, 66, 112, 126, 70, 71, 72, 73, 74, 75, 78, 79, 82, 83, 84, 85, 86, 90, 91, 999],
-        [0, 1, 51, 61, 113, 127, 70, 71, 72, 74, 75, 78, 79, 82, 83, 84, 85, 86, 87, 90, 91, 999],
-        [0, 1, 52, 62, 114, 128, 72, 74, 75, 76, 78, 79, 80, 82, 83, 84, 85, 88, 91, 999],
-        [0, 1, 53, 63, 115, 129, 71, 73, 74, 77, 78, 79, 82, 85, 89, 57, 123, 999],
-        [0, 1, 54, 64, 116, 130, 74, 75, 76, 79, 82, 83, 89, 999],
-        [0, 1, 54, 64, 117, 131, 74, 75, 76, 79, 82, 83, 89, 999],
-        [0, 1, 55, 65, 118, 132, 71, 77, 79, 82, 89, 57, 999],
-        [0, 1, 56, 66, 119, 133, 70, 71, 72, 73, 74, 75, 78, 79, 82, 83, 84, 85, 86, 90, 91, 999],
-        [0],
-        [0],
-        [0],
-        [0],
-        [0],
-        [0],
-        [0],
-        [0, 1, 141, 83, 84, 85, 86, 3001, 3051, 3070, 3072, 999],
-        [0, 1, 142, 79, 83, 84, 85, 86, 87, 91, 2082, 3001, 3051, 3070, 3072, 3079, 999],
-        [0, 1, 143, 55, 65, 71, 77, 79, 89, 111, 2082, 3001, 3079, 3089, 999],
-        [0, 1, 144, 58, 52, 91, 3001, 3051, 3054, 3070, 3072, 3089, 999],
-        [0, 1, 145, 59, 83, 3001, 3054, 3089, 999]
-    ], SyuzokuOBJ = ["<b style='color:#9F9E9B'>Formless</b>", "<b style='color:#252520'>Undead</b>", "<b style='color:brown'>Brute</b>", "<b style='color:#88bd68'>Plant</b>", "<b style='color:green'>Insect</b>", "<b style='color:blue'>Fish</b>", "<b>Demon</b>", "<b style='color:orange'>Demi-Human</b>", "<b style='color:#CDCD40'>Angel</b>", "<b style='color:red'>Dragon</b>"], SyuzokuOBJ2 = ["Formless", "Undead", "Brute", "Plant", "Insect", "Fish", "Demon", "Demi-Human", "Angel", "Dragon"], ZokuseiOBJ = ["<b style='color:#A8A682'>Neutral</b>", "<b style='color:blue'>Water</b>", "<b style='color:brown'>Earth</b>", "<b style='color:red'>Fire</b>", "<b style='color:green'>Wind</b>", "<b style='color:#7B2488'>Poison</b>", "<b style='color:#CDCD40'>Holy</b>", "<b>Shadow</b>", "<b style='color:#9F9E9B'>Ghost</b>", "<b style='color:#252520'>Undead</b>"], ZokuseiOBJ2 = ["Neutral ", "Water ", "Earth ", "Fire ", "Wind ", "Poison ", "Holy ", "Shadow ", "Ghost ", "Undead "], SizeOBJ = ["Small", "Medium", "Large"], IjyouOBJ = ["Poison", "Stun", "Freeze", "Curse", "Blind", "Sleep", "Silence", "Chaos", "Bleeding", "Stone", "Weapon Break", "Armor Break"], EnergyCoatOBJ = ["0", "6% Reduction", "12% Reduction", "18% Reduction", "24% Reduction", "30% Reduction"],
-    SpecialTypeOBJ = ["(None)", "Goblin", "Golem", "Guardian", "Kobold", "Orc", "Satan Morroc"], BossTypeOBJ = ["Normal", "Boss"], SubName = ["%", "s", "Damage", "Critical Damage", "Critical Rate", "Over 10000 Hits", "Too High to Calculate", "Immesurable", " x ", "Cast Time", "Off", "On"], Pets = [
-        [800, 1e3, 200, 500, 1500, 800, 500, 800, 500, 1500, 200, 200, 200, 800, 800, 800, 800, 800, 800, 800, 50, 500, 2e3, 500, 50, 500, 200, 200, 1500, 500, 500, 200, 200, 500, 200, 500, 1e3, 500, 2e3, 1e3, 1e3, 2e3, 1500, 1500, 500, 1e3, 500, 1500, 1e3, 200, 200, 1e3, 800, 500, 2e3, 300],
-        [13, 189, 229, 275, 184, 194, 193, 186, 205, 214, 329, 198, 466, 108, 109, 110, 111, 112, 113, 114, 115, 106, 398, 232, 23, 20, 345, 326, 311, 334, 283, 306, 299, 302, 216, 50, 262, 250, 238, 267, 271, 272, 320, 128, 73, 161, 167, 160, 153, 260, 123, 307, 129, 26, 399, 142]
-    ], bBGC = ["#CDF", "#CCC", "#FDC", "#313", "#000"], hBGC1 = ["#355", "#57D", "#B44", "#622", "#444"], hBGC2 = ["#477", "#24A", "#A33", "#411", "#222"], selBGC = ["#FC8", "#FC8", "#FC8", "#FC8", "#AAA"], ssBGC = ["#FFF", "#FFF", "#FFF", "#FC8", "#AAA"], sBGC = ["#466", "#36B", "#A33", "#626", "#000"], saBGC = ["#A52", "#811", "#3A3", "#A11", "#A11"], mBGC = ["#FFF", "#FFF", "#FFF", "#C8F", "#444"], tBGC = ["#FFF", "#FFF", "#FFF", "#C8F", "#555"];
+    [25, 0, "Arrow"],
+    [30, 6, "Silver Arrow"],
+    [30, 3, "Fire Arrow"],
+    [30, 0, "Iron Arrow"],
+    [30, 2, "Stone Arrow"],
+    [30, 1, "Crystal Arrow"],
+    [30, 4, "Arrow of Wind"],
+    [30, 7, "Arrow of Shadow"],
+    [30, 8, "Immaterial Arrow"],
+    [30, 5, "Rusty Arrow"],
+    [40, 0, "Steel Arrow"],
+    [50, 0, "Oridecon Arrow"],
+    [50, 6, "Arrow of Counter Evil"],
+    [1, 1, "Frozen Arrow"],
+    [1, 5, "Poison Arrow"],
+    [10, 0, "Sharp Arrow"],
+    [50, 6, "Holy Arrow"],
+    [35, 0, "Hunting Arrow"],
+    [45, 0, "Elven Arrow"],
+    [1, 0, "Stun Arrow"],
+    [1, 0, "Cursed Arrow"],
+    [1, 0, "Flash Arrow"],
+    [1, 0, "Sleep Arrow"],
+    [1, 0, "Mute Arrow"]
+], ArrowOBJbackup = [
+    [25, 0, "Arrow"],
+    [30, 6, "Silver Arrow"],
+    [30, 3, "Fire Arrow"],
+    [30, 0, "Iron Arrow"],
+    [30, 2, "Stone Arrow"]
+], BulletOBJ = [
+    [10, 0, "Bullet"],
+    [15, 6, "Silver Bullet"],
+    [30, 0, "Blood Bullet"]
+], GrenadeOBJ = [
+    [50, 3, "Flare Sphere"],
+    [50, 1, "Freezing Sphere"],
+    [50, 4, "Lightning Sphere"],
+    [50, 7, "Blind Sphere"],
+    [50, 5, "Poison Sphere"]
+], SyurikenOBJ = [
+    [10, 0, "Shuriken"],
+    [30, 0, "Numbus Shuriken"],
+    [45, 0, "Flash Shuriken"],
+    [70, 0, "Sharp Leaf Shuriken"],
+    [100, 0, "Thorn Needle Shuriken"]
+], KunaiOBJ = [
+    [30, 3, "Heat Wave Kunai"],
+    [30, 1, "Icicle Kunai"],
+    [30, 4, "High Wind Kunai"],
+    [30, 2, "Black Earth Kunai"],
+    [30, 5, "Fell Poison Kunai"]
+], JobEquipItemOBJ = [
+    [0, 50, 90, 100, 999],
+    [0, 1, 51, 101, 70, 71, 72, 74, 75, 78, 83, 84, 85, 86, 87, 90, 91, 999],
+    [0, 1, 52, 102, 72, 74, 75, 78, 80, 83, 84, 85, 90, 91, 999],
+    [0, 1, 53, 103, 71, 73, 74, 77, 78, 85, 89, 57, 999],
+    [0, 1, 54, 104, 75, 76, 83, 89, 999],
+    [0, 1, 55, 105, 71, 77, 89, 57, 999],
+    [0, 1, 56, 106, 70, 71, 72, 73, 74, 75, 78, 83, 84, 85, 86, 90, 91, 999],
+    [0, 1, 51, 61, 107, 70, 71, 72, 74, 75, 78, 79, 83, 84, 85, 86, 87, 90, 91, 999],
+    [0, 1, 52, 62, 108, 72, 74, 75, 78, 79, 81, 83, 84, 85, 90, 91, 999],
+    [0, 1, 53, 63, 109, 71, 73, 74, 77, 78, 79, 81, 85, 89, 57, 999],
+    [0, 1, 54, 64, 110, 75, 76, 79, 80, 83, 88, 89, 999],
+    [0, 1, 55, 65, 111, 71, 77, 79, 89, 57, 999],
+    [0, 1, 56, 66, 112, 70, 71, 72, 73, 74, 75, 78, 79, 83, 84, 85, 86, 90, 91, 999],
+    [0, 1, 51, 61, 113, 70, 71, 72, 74, 75, 78, 79, 83, 84, 85, 86, 87, 90, 91, 999],
+    [0, 1, 52, 62, 114, 72, 74, 75, 76, 78, 79, 80, 83, 84, 85, 88, 91, 999],
+    [0, 1, 53, 63, 115, 71, 73, 74, 77, 78, 79, 85, 89, 57, 999],
+    [0, 1, 54, 64, 116, 74, 75, 76, 79, 83, 89, 999],
+    [0, 1, 54, 64, 117, 74, 75, 76, 79, 83, 89, 999],
+    [0, 1, 55, 65, 118, 71, 77, 79, 89, 57, 999],
+    [0, 1, 56, 66, 119, 70, 71, 72, 73, 74, 75, 78, 79, 83, 84, 85, 86, 90, 91, 999],
+    [0, 50, 90, 120, 999],
+    [0, 1, 51, 61, 107, 121, 70, 71, 72, 74, 75, 78, 79, 82, 83, 84, 85, 86, 87, 90, 91, 999],
+    [0, 1, 52, 62, 108, 122, 72, 74, 75, 78, 79, 81, 82, 83, 84, 85, 90, 91, 999],
+    [0, 1, 53, 63, 109, 123, 71, 73, 74, 77, 78, 79, 81, 82, 85, 89, 57, 999],
+    [0, 1, 54, 64, 110, 124, 75, 76, 79, 80, 82, 83, 88, 89, 999],
+    [0, 1, 55, 65, 111, 125, 71, 77, 79, 82, 89, 57, 999],
+    [0, 1, 56, 66, 112, 126, 70, 71, 72, 73, 74, 75, 78, 79, 82, 83, 84, 85, 86, 90, 91, 999],
+    [0, 1, 51, 61, 113, 127, 70, 71, 72, 74, 75, 78, 79, 82, 83, 84, 85, 86, 87, 90, 91, 999],
+    [0, 1, 52, 62, 114, 128, 72, 74, 75, 76, 78, 79, 80, 82, 83, 84, 85, 88, 91, 999],
+    [0, 1, 53, 63, 115, 129, 71, 73, 74, 77, 78, 79, 82, 85, 89, 57, 123, 999],
+    [0, 1, 54, 64, 116, 130, 74, 75, 76, 79, 82, 83, 89, 999],
+    [0, 1, 54, 64, 117, 131, 74, 75, 76, 79, 82, 83, 89, 999],
+    [0, 1, 55, 65, 118, 132, 71, 77, 79, 82, 89, 57, 999],
+    [0, 1, 56, 66, 119, 133, 70, 71, 72, 73, 74, 75, 78, 79, 82, 83, 84, 85, 86, 90, 91, 999],
+    [0],
+    [0],
+    [0],
+    [0],
+    [0],
+    [0],
+    [0],
+    [0, 1, 141, 83, 84, 85, 86, 3001, 3051, 3070, 3072, 999],
+    [0, 1, 142, 79, 83, 84, 85, 86, 87, 91, 2082, 3001, 3051, 3070, 3072, 3079, 999],
+    [0, 1, 143, 55, 65, 71, 77, 79, 89, 111, 2082, 3001, 3079, 3089, 999],
+    [0, 1, 144, 58, 52, 91, 3001, 3051, 3054, 3070, 3072, 3089, 999],
+    [0, 1, 145, 59, 83, 3001, 3054, 3089, 999]
+], SyuzokuOBJ = ["<b style='color:#9F9E9B'>Formless</b>", "<b style='color:#252520'>Undead</b>", "<b style='color:brown'>Brute</b>", "<b style='color:#88bd68'>Plant</b>", "<b style='color:green'>Insect</b>", "<b style='color:blue'>Fish</b>", "<b>Demon</b>", "<b style='color:orange'>Demi-Human</b>", "<b style='color:#CDCD40'>Angel</b>", "<b style='color:red'>Dragon</b>"], SyuzokuOBJ2 = ["Formless", "Undead", "Brute", "Plant", "Insect", "Fish", "Demon", "Demi-Human", "Angel", "Dragon"], ZokuseiOBJ = ["<b style='color:#A8A682'>Neutral</b>", "<b style='color:blue'>Water</b>", "<b style='color:brown'>Earth</b>", "<b style='color:red'>Fire</b>", "<b style='color:green'>Wind</b>", "<b style='color:#7B2488'>Poison</b>", "<b style='color:#CDCD40'>Holy</b>", "<b>Shadow</b>", "<b style='color:#9F9E9B'>Ghost</b>", "<b style='color:#252520'>Undead</b>"], ZokuseiOBJ2 = ["Neutral ", "Water ", "Earth ", "Fire ", "Wind ", "Poison ", "Holy ", "Shadow ", "Ghost ", "Undead "], SizeOBJ = ["Small", "Medium", "Large"], IjyouOBJ = ["Poison", "Stun", "Freeze", "Curse", "Blind", "Sleep", "Silence", "Chaos", "Bleeding", "Stone", "Weapon Break", "Armor Break"], EnergyCoatOBJ = ["0", "6% Reduction", "12% Reduction", "18% Reduction", "24% Reduction", "30% Reduction"], SpecialTypeOBJ = ["(None)", "Goblin", "Golem", "Guardian", "Kobold", "Orc", "Satan Morroc"], BossTypeOBJ = ["Normal", "Boss"], SubName = ["%", "s", "Damage", "Critical Damage", "Critical Rate", "Over 10000 Hits", "Too High to Calculate", "Immesurable", " x ", "Cast Time", "Off", "On"], Pets = [
+    [800, 1e3, 200, 500, 1500, 800, 500, 800, 500, 1500, 200, 200, 200, 800, 800, 800, 800, 800, 800, 800, 50, 500, 2e3, 500, 50, 500, 200, 200, 1500, 500, 500, 200, 200, 500, 200, 500, 1e3, 500, 2e3, 1e3, 1e3, 2e3, 1500, 1500, 500, 1e3, 500, 1500, 1e3, 200, 200, 1e3, 800, 500, 2e3, 300],
+    [13, 189, 229, 275, 184, 194, 193, 186, 205, 214, 329, 198, 466, 108, 109, 110, 111, 112, 113, 114, 115, 106, 398, 232, 23, 20, 345, 326, 311, 334, 283, 306, 299, 302, 216, 50, 262, 250, 238, 267, 271, 272, 320, 128, 73, 161, 167, 160, 153, 260, 123, 307, 129, 26, 399, 142]
+], bBGC = ["#CDF", "#CCC", "#FDC", "#313", "#000"], hBGC1 = ["#355", "#57D", "#B44", "#622", "#444"], hBGC2 = ["#477", "#24A", "#A33", "#411", "#222"], selBGC = ["#FC8", "#FC8", "#FC8", "#FC8", "#AAA"], ssBGC = ["#FFF", "#FFF", "#FFF", "#FC8", "#AAA"], sBGC = ["#466", "#36B", "#A33", "#626", "#000"], saBGC = ["#A52", "#811", "#3A3", "#A11", "#A11"], mBGC = ["#FFF", "#FFF", "#FFF", "#C8F", "#444"], tBGC = ["#FFF", "#FFF", "#FFF", "#C8F", "#555"];
 var sheet = function() {
     var _ = document.createElement("style");
-    return _.appendChild(document.createTextNode("")), document.head.appendChild(_), _.sheet
+    return _.appendChild(document.createTextNode("")), document.head.appendChild(_),
+        _.sheet
 }();
 SWs3sw = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
