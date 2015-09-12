@@ -1804,6 +1804,7 @@ ItemOBJ = [
 ,[1795,51,0,2,0,0,10,70,"Blood Butterfly Ears (FreeRO)",0,"",9,2,15,1,37,2,0]
 ,[1796,51,0,0,0,0,10,70,"Butterfly Wing Ear (FreeRO)",0,"",5,1,0]
 ,[1797,64,3001,0,0,1,20,75,"Waterdrop Brooch(FreeRO)",0,"",61,5,15,1,19,2,0] 
+,[1798,52,0,2,0,0,10,1,"Chewing Bubblegum (FreeRO)",0,"",4,1,89,1,57,3,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
