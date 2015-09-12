@@ -1805,6 +1805,7 @@ ItemOBJ = [
 ,[1796,51,0,0,0,0,10,70,"Butterfly Wing Ear (FreeRO)",0,"",5,1,0]
 ,[1797,64,3001,0,0,1,20,75,"Waterdrop Brooch(FreeRO)",0,"",61,5,15,1,19,2,0] 
 ,[1798,52,0,2,0,0,10,1,"Chewing Bubblegum (FreeRO)",0,"",4,1,89,1,57,3,0]
+,[1799,50,0,3,0,0,10,0,"Baka Ribbon (FreeRO)",0,"<font color=blue><b>[Event Bonus, с 9 по 23 сентября]</b></font> <br> Enables use of Level 3 Frost Joker. <br> Resive 9% more Experience Points from [" + SyuzokuOBJ[5] +"] and [" + SyuzokuOBJ[3] +"] race monsters.",13,99,57,4,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
