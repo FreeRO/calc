@@ -879,22 +879,95 @@ function A4(_) {
     0 == n ? (document.getElementById("A4TD").style.backgroundColor = sBGC[i], myInnerHtml("A4used", "", 0)) : (document.getElementById("A4TD").style.backgroundColor = saBGC[i], myInnerHtml("A4used", " <B>[Active]</B>", 0))
 }
 
-function Buf6SW(v) {
-    with(document.calcForm) {
-        if (n_Skill6SW = v, n_Skill6SW) {
-            var str;
-            for (str = '<table class="tborder">', str += '<TR><TD id="A6TD" ColSpan="4" class="subheader point" onclick="Buf6SW(0)">Miscellaneous Effects on Player<span id="A6used"></span>', str += '<div class="right">(click to show/hide)</div></TD></TR>', str += '<TR><TD id="EN60_1" class="center"></TD><TD id="EN60_2" class="data"></TD><TD class="center">Poison</TD><TD id="EN62_2"></TD></TR>', str += '<TR><TD class="center">Provoke (self)</TD><TD id="EN63_2" class="data"></TD><TD class="center">Stun</TD><TD id="EN75_2"></TD></TR>', str += '<TR><TD class="center">Mind Breaker (self)</TD><TD id="EN61_2" class="data"></TD><TD class="center">Freeze</TD><TD id="EN78_2"></TD></TR>', str += '<TR><TD class="center">AGI Down</TD><TD id="EN66_2" class="data"></TD><TD class="center">Curse</TD><TD id="EN64_2"></TD></TR>', str += '<TR><TD class="center">Quagmire</TD><TD id="EN68_2" class="data"></TD><TD class="center">Blind</TD><TD id="EN74_2"></TD></TR>', str += '<TR><TD class="center">Wall of Fog</TD><TD id="EN70_2" class="data"></TD><TD class="center">Sleep</TD><TD id="EN77_2"></TD></TR>', str += '<TR><TD class="center">Undead Attribute Change</TD><TD id="EN65_2" class="data"></TD><TD class="center">Stone</TD><TD id="EN76_2"></TD></TR>', str += '<TR><TD class="center">Holy Armor [B.S.S.]</TD><TD id="EN67_2" class="data"></TD><TD class="center">Bleeding</TD><TD id="EN80_2"></TD></TR>', str += '<TR><TD class="center">Magnum Break Bonus</TD><TD id="EN69_2" class="data"></TD><TD class="center">Lex Aeterna</TD><TD id="EN79_2"></TD></TR>', str += '<TR><TD class="center">Set CRIT to 0%</TD><TD id="EN71_2" class="data"></TD><TD class="center">Critical Wounds</TD><TD id="EN81_2"></TD></TR>', str += '<TR><TD id="EN72_1" class="center" colspan="3">All Stats +1 [SuperNovice Wife Undying Love Bonus]</TD><TD id="EN72_2"></TD></TR>', str += '<TR><TD id="EN73_1" class="center" colspan="3"></TD><TD id="EN73_2"></TD></TR>', str += "</TABLE>", myInnerHtml("SP_SIEN04", str, 0), myInnerHtml("EN60_1", '<select name="A6_Skill0" onChange="StAllCalc()"></select>', 0), myInnerHtml("EN60_2", '<select name="A6_Skill1" onChange="A6(1)"></select>', 0), myInnerHtml("EN61_2", '<select name="A6_Skill4" onChange="A6(1)"></select>', 0), myInnerHtml("EN62_2", '<input type="checkbox" name="A_IJYOU2" onClick="A6(1)">', 0), myInnerHtml("EN63_2", '<select name="A6_Skill5" onChange="A6(1)"></select>', 0), myInnerHtml("EN64_2", '<input type="checkbox" name="A_IJYOU3" onClick="A6(1)">', 0), myInnerHtml("EN65_2", '<input type="checkbox" name="A6_Skill8" onClick="A6(1)">', 0), myInnerHtml("EN66_2", '<select name="A_IJYOU1" onChange="A6(1)"></select>', 0), myInnerHtml("EN67_2", '<input type="checkbox" name="A6_Skill6" onClick="A6(1)">', 0), myInnerHtml("EN68_2", '<select name="A_IJYOU0" onChange="A6(1)"></select>', 0), myInnerHtml("EN69_2", '<input type="checkbox" name="A6_Skill7" onClick="A6(1)">', 0), myInnerHtml("EN70_2", '<input type="checkbox" name="A6_Skill3" onClick="A6(1)">', 0), myInnerHtml("EN71_2", '<input type="checkbox" name="A6_Skill9" onClick="A6(1)">', 0), myInnerHtml("EN72_2", '<input type="checkbox" name="A6_Skill10" onClick="A6(1)">', 0), myInnerHtml("EN73_1", "", 0), myInnerHtml("EN74_2", '<input type="checkbox" name="A6_Skill11" onClick="A6(1)">', 0), myInnerHtml("EN75_2", '<input type="checkbox" name="A6_Skill12" onClick="A6(1)">', 0), myInnerHtml("EN76_2", '<input type="checkbox" name="A6_Skill13" onClick="A6(1)">', 0), myInnerHtml("EN77_2", '<input type="checkbox" name="A6_Skill14" onClick="A6(1)">', 0), myInnerHtml("EN78_2", '<input type="checkbox" name="A6_Skill15" onClick="A6(1)">', 0), myInnerHtml("EN79_2", '<input type="checkbox" name="A6_Skill16" onClick="A6(1)">', 0), myInnerHtml("EN80_2", '<input type="checkbox" name="A6_Skill17" onClick="A6(1)">', 0), myInnerHtml("EN81_2", '<select name="A6_Skill18" onChange="A6(1)"></select>', 0), A6_Skill0.options[0] = new Option("Volcano", 0), A6_Skill0.options[1] = new Option("Deluge", 1), A6_Skill0.options[2] = new Option("Violent Gale", 2), i = 0; 5 >= i; i++) A6_Skill1.options[i] = new Option(i, i);
-            for (A6_Skill2.options[0] = new Option("None", 0), A6_Skill2.options[1] = new Option("ALL+3", 1), A6_Skill2.options[2] = new Option("ALL+5", 2), i = 0; 5 >= i; i++) A6_Skill4.options[i] = new Option(i, i), A6_Skill18.options[i] = new Option(i, i);
-            for (i = 0; 10 >= i; i++) A6_Skill5.options[i] = new Option(i, i);
-            for (A_IJYOU0.options[0] = new Option("-", 0), i = 1; 5 >= i; i++) A_IJYOU0.options[i] = new Option("Lv" + i, i);
-            for (A_IJYOU1.options[0] = new Option("-", 0), i = 1; 10 >= i; i++) A_IJYOU1.options[i] = new Option("Lv" + i, i);
-            A_IJYOU1.options[11] = new Option("Lv46", 46), A6_Skill0.value = n_A_Buf6[0], A6_Skill1.value = n_A_Buf6[1], A6_Skill2.value = n_A_Buf6[2], A6_Skill3.checked = n_A_Buf6[3], A6_Skill4.value = n_A_Buf6[4], A6_Skill5.value = n_A_Buf6[5], A6_Skill6.checked = n_A_Buf6[6], A6_Skill7.checked = n_A_Buf6[7], A6_Skill8.checked = n_A_Buf6[8], A6_Skill9.checked = n_A_Buf6[9], A6_Skill10.checked = n_A_Buf6[10], A6_Skill11.checked = n_A_Buf6[11], A6_Skill12.checked = n_A_Buf6[12], A6_Skill13.checked = n_A_Buf6[13], A6_Skill14.checked = n_A_Buf6[14], A6_Skill15.checked = n_A_Buf6[15], A6_Skill16.checked = n_A_Buf6[16], A6_Skill17.checked = n_A_Buf6[17], A6_Skill18.value = n_A_Buf6[18], A_IJYOU0.value = n_A_Buf6[19], A_IJYOU1.value = n_A_Buf6[20], A_IJYOU2.checked = n_A_Buf6[21], A_IJYOU3.checked = n_A_Buf6[22]
-        } else {
-            var str;
-            str = '<table class="tborder">', str += '<TR><TD id="A6TD" class="subheader point" onclick="Buf6SW(1)">Miscellaneous Effects on Player<span id="A6used"></span>', str += '<div class="right">(click to show/hide)</div></TD></TR></TABLE>', myInnerHtml("SP_SIEN04", str, 0)
-        }
-        A6(0)
+function Buf6SW(v){
+  with(document.calcForm){
+    if(n_Skill6SW=v,n_Skill6SW){
+      var str;
+      for(str='<TABLE class="tborder">',
+          str+='<TR><TD id="A6TD" ColSpan="4" class="subheader point" onclick="Buf6SW(0)">Miscellaneous Effects on Player<span id="A6used"></span>',
+          str+='<DIV class="right">(click to hide)</DIV></TD></TR>',
+          str+='<TR><TD id="EN60_1" class="center"></TD><TD id="EN60_2" class="data"></TD><TD class="center">Poison</TD><TD id="EN62_2"></TD></TR>',
+          str+='<TR><TD class="center">Provoke (self)</TD><TD id="EN63_2" class="data"></TD><TD class="center">Stun</TD><TD id="EN75_2"></TD></TR>',
+          str+='<TR><TD class="center">Mind Breaker (self)</TD><TD id="EN61_2" class="data"></TD><TD class="center">Freeze</TD><TD id="EN78_2"></TD></TR>',
+          str+='<TR><TD class="center">AGI Down</TD><TD id="EN66_2" class="data"></TD><TD class="center">Curse</TD><TD id="EN64_2"></TD></TR>',
+          str+='<TR><TD class="center">Quagmire</TD><TD id="EN68_2" class="data"></TD><TD class="center">Blind</TD><TD id="EN74_2"></TD></TR>',
+          str+='<TR><TD class="center">Wall of Fog</TD><TD id="EN70_2" class="data"></TD><TD class="center">Sleep</TD><TD id="EN77_2"></TD></TR>',
+          str+='<TR><TD class="center">Undead Attribute Change</TD><TD id="EN65_2" class="data"></TD><TD class="center">Stone</TD><TD id="EN76_2"></TD></TR>',
+          str+='<TR><TD class="center">Holy Armor [B.S.S.]</TD><TD id="EN67_2" class="data"></TD><TD class="center">Bleeding</TD><TD id="EN80_2"></TD></TR>',
+          str+='<TR><TD class="center">Magnum Break Bonus</TD><TD id="EN69_2" class="data"></TD><TD class="center">Lex Aeterna</TD><TD id="EN79_2"></TD></TR>',
+          str+='<TR><TD class="center">Set CRIT to 0%</TD><TD id="EN71_2" class="data"></TD><TD class="center">Critical Wounds</TD><TD id="EN81_2"></TD></TR>',
+          str+='<TR><TD id="EN72_1" class="center" colspan="3">All Stats +1 [SuperNovice Wife Undying Love Bonus]</TD><TD id="EN72_2"></TD></TR>',
+          str+='<TR><TD id="EN73_1" class="center" colspan="3">Quad Exp & Bonus to Stats</TD><TD id="EN73_2"></TD></TR>',
+          str+="</TABLE>",
+          myInnerHtml("SP_SIEN04",str,0),
+          myInnerHtml("EN60_1",'<select name="A6_Skill0" onChange="StAllCalc()"></select>',0),
+          myInnerHtml("EN60_2",'<select name="A6_Skill1" onChange="A6(1)"></select>',0),
+          myInnerHtml("EN61_2",'<select name="A6_Skill4" onChange="A6(1)"></select>',0),
+          myInnerHtml("EN62_2",'<input type="checkbox" name="A_IJYOU2" onClick="A6(1)">',0),
+          myInnerHtml("EN63_2",'<select name="A6_Skill5" onChange="A6(1)"></select>',0),
+          myInnerHtml("EN64_2",'<input type="checkbox" name="A_IJYOU3" onClick="A6(1)">',0),
+          myInnerHtml("EN65_2",'<input type="checkbox" name="A6_Skill8" onClick="A6(1)">',0),
+          myInnerHtml("EN66_2",'<select name="A_IJYOU1" onChange="A6(1)"></select>',0),
+          myInnerHtml("EN67_2",'<input type="checkbox" name="A6_Skill6" onClick="A6(1)">',0),
+          myInnerHtml("EN68_2",'<select name="A_IJYOU0" onChange="A6(1)"></select>',0),
+          myInnerHtml("EN69_2",'<input type="checkbox" name="A6_Skill7" onClick="A6(1)">',0),
+          myInnerHtml("EN70_2",'<input type="checkbox" name="A6_Skill3" onClick="A6(1)">',0),
+          myInnerHtml("EN71_2",'<input type="checkbox" name="A6_Skill9" onClick="A6(1)">',0),
+          myInnerHtml("EN72_2",'<input type="checkbox" name="A6_Skill10" onClick="A6(1)">',0),
+          myInnerHtml("EN73_2",'<select name="A6_Skill2" onChange="A6(1)"></select>',0),
+          myInnerHtml("EN74_2",'<input type="checkbox" name="A6_Skill11" onClick="A6(1)">',0),
+          myInnerHtml("EN75_2",'<input type="checkbox" name="A6_Skill12" onClick="A6(1)">',0),
+          myInnerHtml("EN76_2",'<input type="checkbox" name="A6_Skill13" onClick="A6(1)">',0),
+          myInnerHtml("EN77_2",'<input type="checkbox" name="A6_Skill14" onClick="A6(1)">',0),
+          myInnerHtml("EN78_2",'<input type="checkbox" name="A6_Skill15" onClick="A6(1)">',0),
+          myInnerHtml("EN79_2",'<input type="checkbox" name="A6_Skill16" onClick="A6(1)">',0),
+          myInnerHtml("EN80_2",'<input type="checkbox" name="A6_Skill17" onClick="A6(1)">',0),
+          myInnerHtml("EN81_2",'<select name="A6_Skill18" onChange="A6(1)"></select>',0),
+          A6_Skill0.options[0]=new Option("Volcano",0),
+          A6_Skill0.options[1]=new Option("Deluge",1),
+          A6_Skill0.options[2]=new Option("Violent Gale",2),
+          i=0;5>=i;i++
+         )A6_Skill1.options[i]=new Option(i, i);
+      A6_Skill2.options[0]=new Option("None",0);
+      A6_Skill2.options[1]=new Option("ALL+3",1);
+      A6_Skill2.options[2]=new Option("ALL+5",2);
+      for(i=0;5>=i;i++)A6_Skill4.options[i]=new Option(i,i),A6_Skill18.options[i]=new Option(i,i);
+      for(i=0;10>=i;i++)A6_Skill5.options[i]=new Option(i,i);
+      for(A_IJYOU0.options[0]=new Option("-",0),i=1;5>=i;i++) A_IJYOU0.options[i]=new Option("Lv"+i,i);
+      for(A_IJYOU1.options[0]=new Option("-",0),i=1;10>=i;i++) A_IJYOU1.options[i]=new Option("Lv"+i,i);
+      A_IJYOU1.options[11]=new Option("Lv46",46),
+      A6_Skill0.value=n_A_Buf6[0],
+      A6_Skill1.value=n_A_Buf6[1],
+      A6_Skill2.value=n_A_Buf6[2],
+      A6_Skill3.checked=n_A_Buf6[3],
+      A6_Skill4.value=n_A_Buf6[4],
+      A6_Skill5.value=n_A_Buf6[5],
+      A6_Skill6.checked=n_A_Buf6[6],
+      A6_Skill7.checked=n_A_Buf6[7],
+      A6_Skill8.checked=n_A_Buf6[8],
+      A6_Skill9.checked=n_A_Buf6[9],
+      A6_Skill10.checked=n_A_Buf6[10],
+      A6_Skill11.checked=n_A_Buf6[11],
+      A6_Skill12.checked=n_A_Buf6[12],
+      A6_Skill13.checked=n_A_Buf6[13],
+      A6_Skill14.checked=n_A_Buf6[14],
+      A6_Skill15.checked=n_A_Buf6[15],
+      A6_Skill16.checked=n_A_Buf6[16],
+      A6_Skill17.checked=n_A_Buf6[17],
+      A6_Skill18.value=n_A_Buf6[18],
+      A_IJYOU0.value=n_A_Buf6[19],
+      A_IJYOU1.value=n_A_Buf6[20],
+      A_IJYOU2.checked=n_A_Buf6[21],
+      A_IJYOU3.checked=n_A_Buf6[22]
+    }else{
+      var str;
+      str='<table class="tborder">',
+      str+='<TR><TD id="A6TD" class="subheader point" onclick="Buf6SW(1)">Miscellaneous Effects on Player<span id="A6used"></span>',
+      str+='<div class="right">(click to show)</div></TD></TR></TABLE>',
+      myInnerHtml("SP_SIEN04",str,0)
     }
+  A6(0)
+  }
 }
 
 function A6(_) {
