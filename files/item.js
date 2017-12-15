@@ -357,7 +357,7 @@ ItemOBJ = [
 ,[350,50,1,0,0,0,10,75,"Mistress Crown",0,"",4,2,14,100,0]
 ,[351,50,0,1,0,0,20,45,"Giant Ribbon",0,"",19,10,0]
 ,[352,50,1,1,0,0,20,1,"Indian Headband",0,"",5,1,0]
-,[353,50,1,1,0,0,30,1,"Fox Mask",0,"",2,1,6,1,0]
+,[353,50,1,1,0,0,30,1,"Kitsune Mask",0,"",2,1,6,1,0]
 ,[354,50,0,1,0,0,10,1,"X Hairpin",0,"",0]
 ,[355,50,1,1,0,0,50,1,"Drooping Cat",0,"",19,15,153,30,0]
 ,[356,50,0,1,0,0,10,1,"Tulip Hairpin",0,"",0]
@@ -769,7 +769,7 @@ ItemOBJ = [
 ,[762,999,0,10,0,0,75,94,"Sniping Suit R",0,"[description translation missing - ItemID: 762]",19,10,80,10,89,10,193,1,194,1,0]
 ,[763,100,0,0,0,0,0,0,0,0,"Movement Speed +25% (same as Increase AGI)",0]
 ,[764,100,0,0,0,0,0,0,0,0,"Additional DEF decrease by [Frigg's Circlet] and [Valkyrja's Shield] refine rate.<br>Additional MDEF increase by [Frigg's Circlet] and [Valkyrja's Shield] refine rate.",18,2,19,5,0]
-,[765,100,0,0,0,0,0,0,0,0,"[description translation missing - ItemID: 765]",0]
+,[765,100,0,0,0,0,0,0,0,0,"<b>[Base DEX >= 70]</b> All skill's SP cost -20%",0]
 ,[766,100,0,0,0,0,0,0,0,0,"",157,95,0]
 ,[767,100,0,0,0,0,0,0,0,0,"When receiving ATK based damage, 0.5% chance to cast [Assumptio] Lv 2 on yourself.",0]
 ,[768,100,0,0,0,0,0,0,0,0,0,221,42,221,43,221,44,221,45,221,46,0]
@@ -1806,6 +1806,23 @@ ItemOBJ = [
 ,[1797,64,3001,0,0,1,20,75,"Waterdrop Brooch(FreeRO)",0,"",61,5,15,1,19,2,0] 
 ,[1798,52,0,2,0,0,10,1,"Chewing Bubblegum (FreeRO)",0,"",4,1,89,1,57,3,0]
 ,[1799,50,0,3,0,0,10,0,"Baka Ribbon (FreeRO)",0,"<font color=blue><b>[Event Bonus, с 9 по 23 сентября]</b></font> <br> Enables use of Level 3 Frost Joker. <br> Resive 9% more Experience Points from [" + SyuzokuOBJ[5] +"] and [" + SyuzokuOBJ[3] +"] race monsters.",13,99,57,4,0]
+,[1800,52,0,0,0,0,50,0,"Winter Scarf (FreeRO)",0,"Ice Cream recovery rate +12%",4,1,61,7,0]
+,[1801,50,0,1,0,1,40,0,"Candy Hat (FreeRO)",0,"Recovery effect from <font color=red>Candy</font> +1000%",0]
+,[1802,52,0,0,0,0,10,0,"Lollipop (FreeRO)",0,"",14,5,0]
+,[1803,100,0,0,0,0,0,0,0,0,"Recovery effect from <font color=red>Ice Cream</font>, <font color=red>Honey</font>, <font color=red>Piece of Cake</font> 200%",0] // Candy Hat Set
+,[1804,51,0,1,0,0,10,50,"Odin Mask (FreeRO)",0,"",8,-10,37,4,0]
+,[1805,52,0,0,0,0,10,50,"Blue Herb in Mouth (FreeRO)",0,"Recover <b><font color=blue>15 SP</font></b> every 10 seconds",0]
+,[1806,50,0,4,0,0,20,20,"Diabolic Headphone (FreeRO)",0,"<font color=green>[Mage, Acolyte, Archer Class]</font><br>Additional Status effect [Stun] resistance +5%",151,15,0]
+,[1807,51,0,3,0,0,0,0,"Lonely Spirit (FreeRO)",0,"",11,3,0]
+,[1808,50,0,1,0,0,30,20,"Royal Pumpkin (FreeRO)",0,"",4,1,89,3,73,-3,0]
+,[1809,50,0,1,0,0,10,0,"Rudolph Santa Hat (FreeRO)",0,"Recovery effect from <font color=red>Piece of Cake</font> & <font color=red>Well-baked Cookie</font> +100%",0]
+,[1810,100,0,0,0,0,0,0,0,0,"",37,5,0] // Rudolph Set
+,[1811,50,0,4,0,0,50,30,"Sepia Cap (FreeRO)",0,"",5037,8,5387,8,0]
+,[1812,52,0,1,0,0,20,30,"Soul of Umbala (FreeRO)",0,"[Meat] item recover +25%<br>Every time you kill a monster, chance to drop Meat.",3,1,15,1,0]
+,[1813,52,0,1,0,0,5,1,"Choco Donut (FreeRO)",0,"<font color=green>[Swordman, Merchant, Thief, Archer, Taekwon Classes, Gunslinger, Ninja, Monk]</font><br>Deal +3% ATK based damage<br><font color=green>[Mage, Acolyte classes, Ninja, Soul Linker, Super Novice]</font><br>MATK +2%<br><font color=green>[Acolyte class]</font><br>Your [Heal] effectiveness +5%",5,1,13,50,0]
+,[1814,50,0,2,0,0,20,0,"Oni Horns (FreeRO)",0,"ATK +[STR/4]+[Refine/3]<br>Auto-cast of <font color=green>[Eswoo]</font> only works for Priest",221,163,0]
+,[1815,50,0,2,0,0,20,0,"Blue Beret (FreeRO)",0,"<b>For each refine level above 5:</b> STR +1",5,1,57,5,0]
+,[1816,100,0,0,0,0,0,0,0,0,"",1,2,151,15,0] // Blue Beret Set
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
@@ -2302,6 +2319,9 @@ w_SE = [[737,436,475,"NULL"]
 ,[1780,1779,251,"NULL"]
 ,[1782,1781,288,"NULL"]
 ,[1793,1792,253,"NULL"]
+,[1803,1801,1802,"NULL"]
+,[1810,1809,272,"NULL"]
+,[1816,1815,699,"NULL"]
 ];
 SE_MAXnum = w_SE.length -1;
 for(var i=0;i<=SE_MAXnum;i++){
