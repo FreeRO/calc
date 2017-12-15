@@ -1,4 +1,4 @@
-﻿//[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =?]
+//[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =?]
 //444 = lord kaho's horn activado com info correcta
 //items deletados ou trocados:
 //Corrigido conflito de dois cute ribbon, alterei o nome do cute ribbon com data de kawaii ribbon
