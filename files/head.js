@@ -1,4 +1,4 @@
-﻿function server() {
+function server() {
     SRV = eval(document.getElementById("server").value), calc()
 }
 
@@ -539,6 +539,8 @@ function BattleMagicCalc(_) {
     0 == n_B[19] && CardNumSearch(424) && (n = 1), 0 != n && (wBMC_MDEF = 0, n_B_MDEF2 = 0), 122 == n_A_ActiveSkill ? wBMC2 = Math.floor(_ + 50) : wBMC2 = Math.floor(_ * (100 - wBMC_MDEF) / 100 - n_B_MDEF2), wBMC2 < 1 && (wBMC2 = 1), 104 == n_A_ActiveSkill && 6 != n_B[2] && n_B[3] < 90 && (wBMC2 = 0), wBMC2 = Math.floor(wBMC2 * zokusei[n_B[3]][n_A_Weapon_zokusei]), SRV ? n_B[3] > 89 && n_B[3] < 95 && 47 == n_A_ActiveSkill && (wBMC2 = Math.floor(wBMC2 * (1 + .05 * n_A_ActiveSkillLV))) : 90 <= n_B[3] && 47 == n_A_ActiveSkill && (wBMC2 = Math.floor(wBMC2 * (1 + .05 * n_A_ActiveSkillLV)));
     var e = n_tok[170 + n_B[2]];
     9 == n_B[2] && SkillSearch(234) && (e += 2 * SkillSearch(234)), wBMC2 = wBMC2 * (100 + e) / 100, wBMC2 = tPlusDamCut(wBMC2);
+    var e = n_tok[650 + Math.floor(n_B[3]/10)];
+    e && (wBMC2 = wBMC2 * (100 + e) / 100), wBMC2 = tPlusDamCut(wBMC2);
     var e = StPlusCalc2(5e3 + n_A_ActiveSkill) + StPlusCard(5e3 + n_A_ActiveSkill);
     return (46 == n_A_ActiveSkill || 47 == n_A_ActiveSkill || 277 == n_A_ActiveSkill) && 5 == n_A_JobClass() && (e += 20 * CardNumSearch(474)), (132 == n_A_ActiveSkill || 133 == n_A_ActiveSkill) && EquipNumSearch(1146) && (e += n_A_HEAD_DEF_PLUS), 131 == n_A_ActiveSkill && EquipNumSearch(1169) && (e += n_A_Weapon_ATKplus), (37 == n_A_ActiveSkill || 387 == n_A_ActiveSkill) && 3 == n_A_JobClass() && EquipNumSearch(1247) && (e += 5, n_A_HEAD_DEF_PLUS >= 7 && (e += 5)), wBMC2 = wBMC2 * (100 + e) / 100, n_A_Buf7[21] && MANUKU_MONSTER() && (wBMC2 = 110 * wBMC2 / 100), n_A_Buf7[24] && SUPURE_MONSTER() && (wBMC2 = 110 * wBMC2 / 100), 131 == n_A_ActiveSkill && n_B_IJYOU[4] && 0 == n_B[19] && n_B[3] < 90 && (wBMC2 = 0), wBMC2 = Math.floor(wBMC2), wBMC2
 }
