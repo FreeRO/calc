@@ -1768,7 +1768,7 @@ ItemOBJ = [
 ,[1759,100,0,0,0,0,0,0,"Foxtail Set",0,"",5,1,0]
 ,[1760,52,0,0,0,0,1,1,"Green Foxtail (FreeRO)",0,"",1,2,5,1,6,2,0]
 ,[1761,100,0,0,0,0,0,0,"Green Foxtail Set",0,"",5,2,0]
-,[1762,50,0,1,0,0,10,10,"Цветок Папоротника (FreeRO)",0,'<font color="#FF0000"><b>MATK vs Elements currently <a href="https://github.com/FreeRO/calc/issues/3">not implemented</a>.</b></font>',220,19,41,9,42,9,49,9,651,9,652,9,659,9,0]
+,[1762,50,0,1,0,0,10,10,"Цветок Папоротника (FreeRO)",0,"",220,19,41,9,42,9,49,9,651,9,652,9,659,9,0]
 ,[1763,50,1,2,0,0,10,0,"Mini Tree (FreeRO)",0,"",151,20,153,20,154,20,0]
 ,[1764,50,0,0,0,0,20,1,"Splash Hat (FreeRO)",0,"",193,1,2,1,221,159,0]
 ,[1765,50,0,1,0,0,30,20,"Yoyo Hat (FreeRO)",0,"Small chance to obtain an [Cute Strawberry-Choco] item when killing a monster.",220,22,2,2,0]
@@ -1916,14 +1916,14 @@ function Item_Setumei(nC1,nC2)
 {
 	wNAME1 = ["0","STR","AGI","VIT","INT","DEX","LUK","All Stats","HIT","FLEE","CRIT","Perfect Dodge","ASPD","MaxHP","MaxSP","MaxHP","MaxSP","ATK","DEF","MDEF"];
 //	wIS = " +";	//mejorar: quitar el/los espacio/s
-//	if(nC2 < 0)		//mejorar: podría no ser necesario (comprobar) si se hace una modificacion sencilla
-//		wIS = " ";	//mejorar: podría no ser necesario (comprobar) si se hace una modificacion sencilla
+//	if(nC2 < 0)		//mejorar: podria no ser necesario (comprobar) si se hace una modificacion sencilla
+//		wIS = " ";	//mejorar: podria no ser necesario (comprobar) si se hace una modificacion sencilla
 
-	if(nC2 > 0){		//mejorar: podría no ser necesario (comprobar) si se hace una modificacion sencilla
+	if(nC2 > 0){		//mejorar: podria no ser necesario (comprobar) si se hace una modificacion sencilla
 		wIS = " +";	//mejorar: quitar el/los espacio/s
 		wISS = " ";	//mejorar: quitar el/los espacio/s
-	}else if(nC2 < 0){		//mejorar: poddría no ser necesario (comprobar) si se hace una modificacion sencilla
-		wIS = " ";	//mejorar: podría no ser necesario (comprobar) si se hace una modificacion sencilla
+	}else if(nC2 < 0){		//mejorar: poddria no ser necesario (comprobar) si se hace una modificacion sencilla
+		wIS = " ";	//mejorar: podria no ser necesario (comprobar) si se hace una modificacion sencilla
 		wISS = " +";
 	}
 	if(1 <= nC1 && nC1 <=11)
@@ -1950,7 +1950,7 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Reduces your defence to 1/"+ nC2 +"<BR>";
 	if(25 == nC1)
 //		CBIstr += "Increases ranged damage by "+ nC2 +"%<BR>";
-		CBIstr += "Deal"+ wIS + nC2 +"% ranged ATK based damage.<BR>";	//bonus bLongAtkRate ¿aumenta el daño de ataques mágicos?
+		CBIstr += "Deal"+ wIS + nC2 +"% ranged ATK based damage.<BR>";	//bonus bLongAtkRate aumenta el dano de ataques magicos?
 	if(26 == nC1){
 //		if (nC2 >0) CBIstr += "Increases ATK based damage against [Boss] type monsters by "+ nC2 +"%<BR>";
 //		if (nC2 <0) CBIstr += "Decreases ATK based damage against [Boss] type monsters by "+ -nC2 +"%<BR>";
@@ -2145,8 +2145,8 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Critical damage +"+ nC2 +"% against [" + SyuzokuOBJ[nC1-320] +"] race monster.<BR>";
 	if(330 <= nC1 && nC1 <=339)
 		CBIstr += "Receive "+ wIS + nC2 +"% damage from ["+ ZokuseiOBJ[nC1-330] +"] element monsters.<BR>";
-    if(650 <= nC1 && nC1 <=659)
-        CBIstr += "Deal"+ wIS + nC2 +"% MATK based damage against [" + ZokuseiOBJ[nC1-340] +"] element monsters.<BR>";
+	if(650 <= nC1 && nC1 <=659)
+		CBIstr += "Deal"+ wIS + nC2 +"% MATK based damage against [" + ZokuseiOBJ[nC1-650] +"] element monsters.<BR>";
 	if(5000 <= nC1 && nC1 <= 6999)
 		CBIstr += "["+ SkillOBJ[nC1 -5000][2] +"] skill damage"+ wIS + nC2 +"%<BR>";
 	if(7000 <= nC1 && nC1 <= 8999){
