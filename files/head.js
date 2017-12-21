@@ -1,4 +1,4 @@
-function server() {
+﻿function server() {
     SRV = eval(document.getElementById("server").value), calc()
 }
 
@@ -617,7 +617,7 @@ function ClickWeaponType(n) {
             for (j = 4, i = 0; 4 >= i; i++) ArrowOBJ[i] = GrenadeOBJ[i];
         else j = 1, ArrowOBJ[0] = [0, 0, "(No Arrow)"], A_Arrow.value = 0, A_Arrow.disabled = !0;
         for (i = 0; i <= j; i++) A_Arrow.options[i] = new Option(ArrowOBJ[i][2], i);
-        WeaponSet(), 0 == n ? (A_Weapon_ATKplus.disabled = !0, A_Weapon_ATKplus.value = 0) : A_Weapon_ATKplus.disabled = !1, n_A_JobSet(), 8 != n_A_JOB && 22 != n_A_JOB || 11 == n ? (myInnerHtml("A_SobWeaponName", "", 0), myInnerHtml("spanA_weapon2", "", 0), myInnerHtml("spanA_weapon2seiren", "", 0), myInnerHtml("spanA_weapon2_CardShort", "", 0), myInnerHtml("nA_weapon2_c1", "", 0), myInnerHtml("nA_weapon2_c2", "", 0), myInnerHtml("nA_weapon2_c3", "", 0), myInnerHtml("nA_weapon2_c4", "", 0), n_Nitou = 0) : 0 == n_Nitou && myInnerHtml("A_SobWeaponName", 'Left Hand: <select name="A_Weapon2Type" onChange = "ClickWeaponType2(this[this.selectedIndex].value) | StAllCalc() | restrictCardslot(1)">  <option value="0">Fist or Shield<option value="1">Dagger<option value="2">Sword<option value="6">Axe</select>', 0), n_A_Equip[0] = eval(A_weapon1.value), ActiveSkillSetPlus(), ClickB_Item(n_A_Equip[0])
+        WeaponSet(), 0 == n ? (A_Weapon_ATKplus.disabled = !0, A_Weapon_ATKplus.value = 0) : A_Weapon_ATKplus.disabled = !1, n_A_JobSet(), 8 != n_A_JOB && 22 != n_A_JOB || 11 == n ? (myInnerHtml("A_SobWeaponName", "", 0), myInnerHtml("spanA_weapon2", "", 0), myInnerHtml("spanA_weapon2seiren", "", 0), myInnerHtml("spanA_weapon2_CardShort", "", 0), myInnerHtml("nA_weapon2_c1", "", 0), myInnerHtml("nA_weapon2_c2", "", 0), myInnerHtml("nA_weapon2_c3", "", 0), myInnerHtml("nA_weapon2_c4", "", 0), n_Nitou = 0) : 0 == n_Nitou && myInnerHtml("A_SobWeaponName", 'Left Hand: <select name="A_Weapon2Type" onChange = "ClickWeaponType2(this[this.selectedIndex].value) | StAllCalc() | restrictCardslot(1)">	<option value="0">Fist or Shield<option value="1">Dagger<option value="2">Sword<option value="6">Axe</select>', 0), n_A_Equip[0] = eval(A_weapon1.value), ActiveSkillSetPlus(), ClickB_Item(n_A_Equip[0])
     }
 }
 

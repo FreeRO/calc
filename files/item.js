@@ -1,4 +1,4 @@
-//[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =?]
+﻿//[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =?]
 //444 = lord kaho's horn activado com info correcta
 //items deletados ou trocados:
 //Corrigido conflito de dois cute ribbon, alterei o nome do cute ribbon com data de kawaii ribbon
@@ -1805,7 +1805,7 @@ ItemOBJ = [
 ,[1796,51,0,0,0,0,10,70,"Butterfly Wing Ear (FreeRO)",0,"",5,1,0]
 ,[1797,64,3001,0,0,1,20,75,"Waterdrop Brooch(FreeRO)",0,"",61,5,15,1,19,2,0] 
 ,[1798,52,0,2,0,0,10,1,"Chewing Bubblegum (FreeRO)",0,"",4,1,89,1,57,3,0]
-,[1799,50,0,3,0,0,10,0,"Baka Ribbon (FreeRO)",0,"<font color=blue><b>[Event Bonus, с 9 по 23 сентября]</b></font> <br> Enables use of Level 3 Frost Joker. <br> Resive 9% more Experience Points from [" + SyuzokuOBJ[5] +"] and [" + SyuzokuOBJ[3] +"] race monsters.",13,99,57,4,0]
+,[1799,50,0,3,0,0,10,0,"Baka Ribbon (FreeRO)",0,"<font color=blue><b>[Event Bonus, с 9 по 23 сентября]</b></font> <br> Enables use of Level 3 Frost Joker. <br> Receive 9% more Experience Points from [" + SyuzokuOBJ[5] +"] and [" + SyuzokuOBJ[3] +"] race monsters.",13,99,57,4,0]
 ,[1800,52,0,0,0,0,50,0,"Winter Scarf (FreeRO)",0,"Ice Cream recovery rate +12%",4,1,61,7,0]
 ,[1801,50,0,1,0,1,40,0,"Candy Hat (FreeRO)",0,"Recovery effect from <font color=red>Candy</font> +1000%",0]
 ,[1802,52,0,0,0,0,10,0,"Lollipop (FreeRO)",0,"",14,5,0]
@@ -1950,7 +1950,7 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Reduces your defence to 1/"+ nC2 +"<BR>";
 	if(25 == nC1)
 //		CBIstr += "Increases ranged damage by "+ nC2 +"%<BR>";
-		CBIstr += "Deal"+ wIS + nC2 +"% ranged ATK based damage.<BR>";	//bonus bLongAtkRate aumenta el dano de ataques magicos?
+		CBIstr += "Deal"+ wIS + nC2 +"% ranged ATK based damage.<BR>";	//bonus bLongAtkRate ?aumenta el dano de ataques magicos?
 	if(26 == nC1){
 //		if (nC2 >0) CBIstr += "Increases ATK based damage against [Boss] type monsters by "+ nC2 +"%<BR>";
 //		if (nC2 <0) CBIstr += "Decreases ATK based damage against [Boss] type monsters by "+ -nC2 +"%<BR>";
