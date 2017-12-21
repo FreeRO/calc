@@ -1916,14 +1916,14 @@ function Item_Setumei(nC1,nC2)
 {
 	wNAME1 = ["0","STR","AGI","VIT","INT","DEX","LUK","All Stats","HIT","FLEE","CRIT","Perfect Dodge","ASPD","MaxHP","MaxSP","MaxHP","MaxSP","ATK","DEF","MDEF"];
 //	wIS = " +";	//mejorar: quitar el/los espacio/s
-//	if(nC2 < 0)		//mejorar: podria no ser necesario (comprobar) si se hace una modificacion sencilla
-//		wIS = " ";	//mejorar: podria no ser necesario (comprobar) si se hace una modificacion sencilla
+//	if(nC2 < 0)		//mejorar: podría no ser necesario (comprobar) si se hace una modificacion sencilla
+//		wIS = " ";	//mejorar: podría no ser necesario (comprobar) si se hace una modificacion sencilla
 
-	if(nC2 > 0){		//mejorar: podria no ser necesario (comprobar) si se hace una modificacion sencilla
+	if(nC2 > 0){		//mejorar: podría no ser necesario (comprobar) si se hace una modificacion sencilla
 		wIS = " +";	//mejorar: quitar el/los espacio/s
 		wISS = " ";	//mejorar: quitar el/los espacio/s
-	}else if(nC2 < 0){		//mejorar: poddria no ser necesario (comprobar) si se hace una modificacion sencilla
-		wIS = " ";	//mejorar: podria no ser necesario (comprobar) si se hace una modificacion sencilla
+	}else if(nC2 < 0){		//mejorar: poddría no ser necesario (comprobar) si se hace una modificacion sencilla
+		wIS = " ";	//mejorar: podría no ser necesario (comprobar) si se hace una modificacion sencilla
 		wISS = " +";
 	}
 	if(1 <= nC1 && nC1 <=11)
@@ -1950,7 +1950,7 @@ function Item_Setumei(nC1,nC2)
 		CBIstr += "Reduces your defence to 1/"+ nC2 +"<BR>";
 	if(25 == nC1)
 //		CBIstr += "Increases ranged damage by "+ nC2 +"%<BR>";
-		CBIstr += "Deal"+ wIS + nC2 +"% ranged ATK based damage.<BR>";	//bonus bLongAtkRate ?aumenta el dano de ataques magicos?
+		CBIstr += "Deal"+ wIS + nC2 +"% ranged ATK based damage.<BR>";	//bonus bLongAtkRate ¿aumenta el daño de ataques mágicos?
 	if(26 == nC1){
 //		if (nC2 >0) CBIstr += "Increases ATK based damage against [Boss] type monsters by "+ nC2 +"%<BR>";
 //		if (nC2 <0) CBIstr += "Decreases ATK based damage against [Boss] type monsters by "+ -nC2 +"%<BR>";
