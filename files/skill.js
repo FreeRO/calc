@@ -3,7 +3,7 @@
 [1,1,"First Aid"],
 [2,1,"Play Dead"],
 [3,10,"Sword Mastery"],
-[4,10,"Two-Hand Sword Mastery"],
+[4,10,"Two-Handed Sword Mastery"],
 [5,10,"Increased HP Recovery"],
 [6,10,"Bash"],
 [7,10,"Magnum Break"],
@@ -268,7 +268,7 @@
 [266,5,"Enchant Deadly Poison"],
 [267,5,"Assumptio"],
 [268,5,"Basilica"],
-[269,10,"Mediatio"],
+[269,10,"Meditatio"],
 [270,10,"True Sight"],
 [271,5,"Falcon Assault"],
 [272,5,"Sharp Shooting"],
@@ -825,6 +825,7 @@ AutoSpellSkill = [
 [159,1,128,3,2,1],
 [160,0,236,1,2,6],
 [161,0,8,5,1,1],
-[162,1,414,3,1,6]
+[162,1,414,3,1,6],
+[163,1,376,7,3,10]
 ];
 //ID, selectable in "Attack Skills", skill ID, skill Lv, chance, trigger
