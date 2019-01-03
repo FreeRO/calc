@@ -304,7 +304,7 @@ function BattleCalc998() {
         for (i = 0; 2 >= i; i++) w_DMG[i] = 0, myInnerHtml("ATK_0" + i, 0, 0);
     tPlusAG();
     var _;
-    if (_ = Math.floor(n_B[6] / w_DMG[2]), n_B[6] % Math.floor(w_DMG[2]) != 0 && (_ += 1), 1e4 > _ ? myInnerHtml("MinATKnum", _, 0) : myInnerHtml("MinATKnum", SubName[5], 0), 0 != SG_Special_HITnum) {
+    if (_ = Math.floor(n_B[6] / Math.floor(w_DMG[2] / wHITsuu)), n_B[6] % Math.floor(w_DMG[2] / wHITsuu) != 0 && (_ += 1), 1e4 > _ ? myInnerHtml("MinATKnum", _, 0) : myInnerHtml("MinATKnum", SubName[5], 0), 0 != SG_Special_HITnum) {
         if (1 == _) {
             var n, e;
             if (n = SG_Special_HITnum, e = (SG_Special_DMG[2] * wHITsuu - n_B[6]) / (SG_Special_DMG[2] * wHITsuu - SG_Special_DMG[0] * wHITsuu), e > 1 && (e = 1), 0 > e && (e = 0), 2 == n && (e = .5 > e ? 2 * e * e : 1 - 2 * (1 - e) * (1 - e)), 3 == n && (1 / 3 > e ? e = 4.5 * Math.pow(e, 3) : e >= 1 / 3 && 2 / 3 > e ? e = 4.5 * (Math.pow(e, 3) - 3 * Math.pow(e - 1 / 3, 3)) : e >= 2 / 3 && (e = 1 - 4.5 * Math.pow(1 - e, 3))), n >= 4) {
@@ -317,15 +317,15 @@ function BattleCalc998() {
     }
     if (w_HIT_HYOUJI < 100 && 0 == n_PerHIT_DMG) myInnerHtml("MaxATKnum", "Infinite (no 100% Hit)", 0);
     else {
-        var t = w_DMG[0];
+        var t = w_DMG[0] / wHITsuu;
         w_HIT_HYOUJI < 100 && (t = n_PerHIT_DMG), _ = Math.floor(n_B[6] / t), n_B[6] % Math.floor(t) != 0 && (_ += 1), 1e4 > _ ? myInnerHtml("MaxATKnum", _, 0) : myInnerHtml("MaxATKnum", SubName[5], 0)
     }
-    if (_ = Math.floor(n_B[6] / w_DMG[1]), n_B[6] % w_DMG[1] != 0 && (_ += 1), 0 == Taijin ? (myInnerHtml("nm063", "Base Exp Per Hit", 0), myInnerHtml("nm064", "Job Exp Per Hit", 0), 1e4 > _ ? (myInnerHtml("AtkBaseExp", Math.round(n_B[16] / _) + "Exp", 0), myInnerHtml("AtkJobExp", Math.round(n_B[17] / _) + "Exp", 0)) : (myInnerHtml("AtkBaseExp", SubName[7], 0), myInnerHtml("AtkJobExp", SubName[7], 0))) : (myInnerHtml("nm063", "", 0), myInnerHtml("AtkBaseExp", "", 0), myInnerHtml("nm064", "", 0), myInnerHtml("AtkJobExp", "", 0)), 1e4 > _) {
+    if (_ = Math.floor(n_B[6] / Math.floor(w_DMG[1] / wHITsuu)), n_B[6] % Math.floor(w_DMG[1] / wHITsuu) != 0 && (_ += 1), 0 == Taijin ? (myInnerHtml("nm063", "Base Exp Per Hit", 0), myInnerHtml("nm064", "Job Exp Per Hit", 0), 1e4 > _ ? (myInnerHtml("AtkBaseExp", Math.round(n_B[16] / _) + "Exp", 0), myInnerHtml("AtkJobExp", Math.round(n_B[17] / _) + "Exp", 0)) : (myInnerHtml("AtkBaseExp", SubName[7], 0), myInnerHtml("AtkJobExp", SubName[7], 0))) : (myInnerHtml("nm063", "", 0), myInnerHtml("AtkBaseExp", "", 0), myInnerHtml("nm064", "", 0), myInnerHtml("AtkJobExp", "", 0)), 1e4 > _) {
         myInnerHtml("AveATKnum", _, 0), n_AveATKnum = _;
         var a = (wCast + wDelay) * n_AveATKnum;
         a = Math.floor(100 * a) / 100, n_Delay[0] ? myInnerHtml("BattleTime", "Special", 0) : myInnerHtml("BattleTime", a + "s", 0)
     } else myInnerHtml("AveATKnum", SubName[5], 0), myInnerHtml("BattleTime", SubName[6], 0);
-    var _ = 1 / (wCast + wDelay) * w_DMG[1];
+    var _ = 1 / (wCast + wDelay) * w_DMG[1] / wHITsuu;
     _ *= 100, _ = Math.round(_), _ /= 100, n_Delay[0] ? myInnerHtml("AveSecondATK", "Special", 0) : myInnerHtml("AveSecondATK", _, 0), _ = BattleHiDam(), _ = Math.round(_ * (100 - n_A_LUCKY)) / 100, _ = Math.round(_ * (100 - w_FLEE)) / 100, n_A_Buf2[13] && (_ = Math.round(_ * w_AG[n_A_Buf2[13]]) / 100), 3 == n_A_WeaponType && SkillSearch(255) && (_ = Math.round(_ * (80 - 3 * SkillSearch(255))) / 100), SkillSearch(287) && (_ = Math.round(_ * (100 - 7.5 * SkillSearch(287))) / 100), myInnerHtml("B_Ave2Atk", Math.round(100 * _ * BskillHitNum) / 100, 0)
 }
 
