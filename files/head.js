@@ -512,9 +512,9 @@ function BattleHiDam() {
         for (n_B_Weapon_zokusei = 3, wBHD = n_tok[60 + n_B_Weapon_zokusei], i = 0; 6 >= i; i++) w_HiDam[i] = 1 * document.calcForm.BSkillSubNum.value - Math.floor(document.calcForm.BSkillSubNum.value * wBHD / 100);
     for (myInnerHtml("B_WeaponElement", ZokuseiOBJ[n_B_Weapon_zokusei] + " (" + 100 * zokusei[10 * n_A_BodyZokusei + 1][n_B_Weapon_zokusei] + "% vs " + ZokuseiOBJ[n_A_BodyZokusei] + "1)", 0), wBHD = 0, i = 0; 6 >= i; i++) wBHD += w_HiDam[i];
     wBHD = Math.round(wBHD / 7);
-    var name67 = "Minimum Damage Recieved",
-        name65 = "Average Damage Recieved",
-        name68 = "Maximum Damage Recieved",
+    var name67 = "Minimum Damage Received",
+        name65 = "Average Damage Received",
+        name68 = "Maximum Damage Received",
         wRefStr1 = "",
         wRefStr0 = "",
         wRefStr2 = "",
