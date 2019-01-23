@@ -129,7 +129,7 @@ function BattleCalc999() {
                 wHITsuu = DEATH[eval(document.calcForm.SkillSubNum.value)]
             }
             ATKbai02(wbairitu, 0);
-            for (var i = 0; 2 >= i; i++) w_DMG[i] = BattleCalc((n_A_DMG[i] * wHITsuu), i), 391 == n_A_ActiveSkill && 2 != n_B[2] && 4 != n_B[2] && (w_DMG[i] = 0), w_DMG[i] += EDP_DMG(i), Last_DMG_B[i] = Math.floor(w_DMG[i] / wHITsuu), Last_DMG_A[i] = Last_DMG_B[i] * wHITsuu, 0 == n_B_IJYOU[6] || 0 == wLAch ? InnStr[i] += Last_DMG_A[i] + " (" + Last_DMG_B[i] + SubName[8] + wHITsuu + "hit)" : (InnStr[i] += 3 * w_DMG[i] + "(" + 2 * w_DMG[i] + "+" + w_DMG[i] + ")", Last_DMG_B[i] = 3 * w_DMG[i]), w_DMG[i] -= EDP_DMG(i), w_DMG[i] *= wHITsuu;
+            for (var i = 0; 2 >= i; i++) w_DMG[i] = Math.floor((BattleCalc((n_A_DMG[i] * wHITsuu), i)) / wHITsuu), 391 == n_A_ActiveSkill && 2 != n_B[2] && 4 != n_B[2] && (w_DMG[i] = 0), w_DMG[i] += EDP_DMG(i), Last_DMG_A[i] = w_DMG[i] * wHITsuu, Last_DMG_B[i] = w_DMG[i], 0 == n_B_IJYOU[6] || 0 == wLAch ? InnStr[i] += Last_DMG_A[i] + " (" + Last_DMG_B[i] + SubName[8] + wHITsuu + "hit)" : (InnStr[i] += 3 * w_DMG[i] + "(" + 2 * w_DMG[i] + "+" + w_DMG[i] + ")", Last_DMG_B[i] = 3 * w_DMG[i]), w_DMG[i] -= EDP_DMG(i), w_DMG[i] *= wHITsuu;
             var wX = BattleCalc2(0);
             w_DMG[1] = (w_DMG[1] * w_HIT + wX * wHITsuu * (100 - w_HIT)) / 100, 0 == wHITsuu && 192 == n_A_ActiveSkill && (InnStr[0] = "<B style='color:red'># of Spirit Spheres must be higher than 0<BR>Please change it at [Supportive/Party Skills]</B>"), EDPplus(wHITsuu), n_PerHIT_DMG = wX * wHITsuu, str_PerHIT_DMG = wX * wHITsuu + " (" + wHITsuu + SubName[8] + wX + " Damage)", CastAndDelay(), BattleCalc998()
         } else if (118 == n_A_ActiveSkill || 271 == n_A_ActiveSkill) {
